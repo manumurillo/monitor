@@ -11,7 +11,6 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Ver todas las tablas', 'url'=>array('index')),
 	array('label'=>'Crear nueva tabla', 'url'=>array('create')),
-	array('label'=>'Ver tabla', 'url'=>array('view', 'id'=>$table->id)),
 	array('label'=>'Administrar tablas', 'url'=>array('admin')),
 );
 ?>
