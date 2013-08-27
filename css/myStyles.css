@@ -1,0 +1,42 @@
+.deleteItem{
+	width: 88px;
+	height: 22px;
+	background: transparent url(../images/deleteItem.png) no-repeat;
+	color: #ffffff;
+}
+
+.addTableButton{
+	width: 95px;
+	height: 22px;
+	background: #ffffff url(../images/addTable.png) no-repeat;
+	color: #ffffff;
+}
+
+.addTextButton{
+	width: 95px;
+	height: 22px;
+	background: #ffffff url(../images/addText.png) no-repeat;
+	color: #ffffff;
+}
+
+.preview{
+	width: 90px;
+	height: 25px;
+	background: #ffffff url(../images/preview.png) no-repeat;
+	color: #ffffff;
+}
+
+.saveDraft{
+	width: 105px;
+	height: 25px;
+	background: #ffffff url(../images/saveDraft.png) no-repeat;
+	color: #ffffff;
+}
+
+.publishAndSave{
+	width: 108px;
+	height: 25px;
+	background: #ffffff url(../images/saveAndPublish.png) no-repeat;
+	color: #ffffff;
+}
+

@@ -1,0 +1,36 @@
+Action update Tabla:
+	1. Precargar los datos de la Tabla y sus respectivas columnas
+		(si las tiene)
+	2. Instanciar un arreglo de columnas.
+	3. Leer la variable $_POST de Tabla si tiene datos.
+		4. Obtener los atributos de $_POST y almacenarlos en la instancia 
+			precargada de Tabla.
+		5. Validar/actualizar Tabla. Si se actualiza con éxito, pasar a columnas.
+		
+			6. Leer la variable $_POST de Columnas si tiene datos.
+				7. Recorrer el arreglo que contiene las columnas precargadas. 
+					(utilizar un índice)
+					8. Leer la variable $_POST con índice correspondiente. Si existe...
+						9. Asignar a la instancia de columna los atributos de $_POST[índice]
+						10. Actualizar la columna.
+					11. Si no existe, almacenar el id de la columna en el arreglo.
+				
+				12. Ahora procedemos a guardar las columnas nuevas que llegaron en $_POST.
+					13. Recorremos el arreglo de $_POST utilizando un índice.
+					14. Si el id de la columna es igual a 0 en el arreglo $_POST[índice].
+						15. Instanciamos un nuevo objeto de TableColumn
+						16. Obtenems los atributos de $_POST[índice] en el nuevo objeto. Incluyendo el table_id
+						17. Guardamos en la base de datos la nueva columnna.
+				18. Procedemos a eliminar las columnas que fueron eliminadas desde el formulario.
+					19. Recorremos el arreglo de columnas.
+					20. Eliminamos una por una indicando el id correspondiente.
+			
+			21. Si $_POST de columnas no tiene datos, puede deberse a dos razones...
+				a) El usuario eliminó todas las columnas desde el formulario.
+				b) La tabla no contenía columnas y no se agregaron más.
+				
+				22. Siguiendo la opción a), recorremos el arreglo de columnas previamente 
+					precargado.
+				23. Eliminamos cada columna por su id.
+				
+			

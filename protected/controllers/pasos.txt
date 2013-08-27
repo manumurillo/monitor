@@ -1,0 +1,18 @@
+Primer metodo para actualizar:
+1. Precargar todas las columnas que están en la base de datos que pertenecen a la tabla x.
+2. Cargar los datos de las columnas del formulario mediante _POST.
+3. Comparar los datos que se reciben del formulario con los de la base de datos.
+	Si tiene asignado un ID--> update.
+	Si no tiene asignado un ID--> save.
+	Si no está en el formulario, pero sí en la BD, significa que lo eliminaron, por lo tanto--> delete.
+
+Otro método:
+1. Recibir los datos del formulario.
+2. Identificamos el valor del id y lo buscamos con find(). Si existe, lo actualizamos sino entonces lo guardamos.
+3. Para eliminar las columnas que se han eliminado...
+	En el formulario: solamente ocultar el div y colocar un atributo (arreglo de id´s)que indique que se ha eliminado.
+	En el controller: Recibir el id y el atributo que indica que se requiere la eliminacion. después: delete(id).
+	
+	http://stackoverflow.com/questions/16344540/yii-model-isnewrecord-false-due-to-constructor
+	http://stackoverflow.com/questions/15201769/yii-composite-primary-keys-with-isnewrecord
+	

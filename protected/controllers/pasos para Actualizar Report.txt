@@ -1,0 +1,60 @@
+Action update Report.
+1. Precargar los datos del Reporte.
+	Precargar Items, Textos, Tablas de Reporte, Filas y Celdas en arreglos.
+2. Crear arreglos donde se almacenarán temporalmente los atributos que se eliminaron del formulario.
+3. Leer la variable $_POST de Reporte
+	4. Obtener los atributos desde $_POST[Report] y almacenarlos en la instancia de Reporte.
+	5. Validar/actualizar reporte. Si se actualiza con éxito, pasar a Items.
+	
+		6. Leer $_POST[Item], si contiene información...
+			7. Recorrer el arreglo que contiene los items precargados
+			8. Recorrer el arreglo de $_POST[Item] y comparar los ids.
+				9. Si son iguales, asignar los atributos de $_POST[Item] a Item.
+					10. Actualizar item
+					11. Si el Item se actualiza correctamente, verificar el tipo.
+						12. Si el tipo es texto
+							13. Recorrer el arreglo precargado de textos y compararlo con el arreglo de $_POST[Text]
+							14. Si los ids son iguales
+								15. Asignar los atributos de $_POST[Text] al Texto.
+								16. Actualizar texto.
+						17. Si el tipo es tabla.
+							18. Recorrer el arreglo precargado de rtables y comparar el id con el arreglo de $_POST[RTable]
+							19. Si los ids son iguales
+								20. Asignar los atributos de $_POST[RTable] a RTable
+								21. Actualizar RTable.
+								22. Si es válido y se actualiza RTable
+									23. Recorrer el arreglo precargado de Rows
+									24. Recorrer el arreglo precargado de $_POST[Row] y comparar ids
+									25. Si los ids son iguales
+										26. Asignar los atributos de $_POST[Row] a Row
+										27. Actualizar Row
+										28. Si es válido y se actualiza Row
+											29. Recorrer el arreglo precargado de Cells
+											30. Recorrer el arreglo de $_POST[Cells] y comparar ids.
+											30. Si los ids son iguales...
+												31. Asignar los aributos de $_POST[Cells] a Cell
+												32. Actualizar/Validar celdas.
+				
+				33. Si el id del item es igual a cero...
+					//Llevar el proceso de create.
+				
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+	
