@@ -54,6 +54,7 @@ Puede utilizar los siguientes operadores (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>
 		),
 		'title',
 		'description:html',
+		'footer:html',
 		array(
             'name'=>'status',
             'value'=>'Lookup::item("ReportTableStatus",$data->status)',
@@ -63,4 +64,6 @@ Puede utilizar los siguientes operadores (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>
 			'class'=>'CButtonColumn',
 		),
 	),
+	'summaryText'=>'Mostrando {start}-{end} de {page} resultados',
+	'emptyText'=>'Muy pronto...',
 )); ?>

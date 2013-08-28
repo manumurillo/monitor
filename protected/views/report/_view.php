@@ -4,23 +4,12 @@
 ?>
 
 <div class="view">
-	
-	<table>
-	</table>
-	
-	
-	
-	
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
-	<?php echo CHtml::encode($data->title); ?>
+	<?php echo CHtml::link(CHtml::encode($data->title), array('view', 'id'=>$data->id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status'));?>:</b>
-	<?php echo $data->viewTextStatus($data->status); ?>
+	<?php echo Lookup::item("ReportStatus",$data->status); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_created')); ?>:</b>

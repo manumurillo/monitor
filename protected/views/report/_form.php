@@ -20,8 +20,8 @@
 			'clientOptions'=>array('validateOnSubmit'=>true),
 		)); 
 	
-		$itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colorCounter = 0;
-		$tinymceArr;
+		$itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colorCounter = $tinyCounter = 0;
+		$tinymceArr = array();
 	?>
 	<table id="report" border="1">
 		<thead>
@@ -96,6 +96,8 @@
 				</th>
 			</tr>
 			<?php
+							$tinymceArr[$tinyCounter]='ReportText_'.$textCounter.'_text';
+							$tinyCounter++;
 							$textCounter++;
 						}
 						else
@@ -128,10 +130,13 @@
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]rtable_id"); 
 										echo "<b>Descripci&oacute;n: </b>";
 										if($texts[$textCounter]->text!='')
-											echo "<div id='ReportText_".$textCounter."_text' class='text tinyMCEditor'>".$texts[$textCounter]->text."</div>";
+											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
 										else
-											echo "<div id='ReportText_".$textCounter."_text' class='text tinyMCEditor'>".$texts[$textCounter]->text."Sin descripción disponible.</div>";
-									$textCounter++;
+											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
+										
+										$tinymceArr[$tinyCounter]='ReportText_'.$textCounter.'_text';
+										$tinyCounter++;
+										$textCounter++;
 									?>
 								</th>
 							</tr>
@@ -170,15 +175,16 @@
 								<th id="cells">
 									<?php 
 										if($autoCompleteArr[$c])
-											echo "<div id='ReportTableCell_".$cellCounter."_content' class='autoComplete content tinyMCEditor'>".$cells[$cellCounter]->content."</div>";
+											echo "<div id='ReportTableCell_".$cellCounter."_content' class='autoComplete content'>".$cells[$cellCounter]->content."</div>";
 										else
-											echo "<div id='ReportTableCell_".$cellCounter."_content' class='content tinyMCEditor'>".$cells[$cellCounter]->content."</div>";
+											echo "<div id='ReportTableCell_".$cellCounter."_content' class='content'>".$cells[$cellCounter]->content."</div>";
 										echo $form->hiddenField($cells[$cellCounter],"[$cellCounter]column_id",array("class"=>"column"));
 										echo $form->hiddenField($cells[$cellCounter],"[$cellCounter]row_id"); 
 									?>
 								</th>
 							<?php 
-										$tinymceArr[$c]=$cellCounter;
+										$tinymceArr[$tinyCounter]='ReportTableCell_'.$cellCounter.'_content';
+										$tinyCounter++;
 										$cellCounter++;
 									}							
 							?>
@@ -202,9 +208,12 @@
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]rtable_id"); 
 										echo "<b>Pie de tabla: </b><br>";
 										if($texts[$textCounter]->text!='')
-											echo "<div id='ReportText_".$textCounter."_text' class='text tinyMCEditor'>".$texts[$textCounter]->text."</div>";
+											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
 										else
-											echo "<div id='ReportText_".$textCounter."_text' class='text tinyMCEditor'>".$texts[$textCounter]->text."Sin descripción disponible.</div>";
+											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
+										
+										$tinymceArr[$tinyCounter]='ReportText_'.$textCounter.'_text';
+										$tinyCounter++;
 										$textCounter++;
 									?>
 								</th>
@@ -251,25 +260,6 @@
 	if($report->isNewRecord==false)
 	{
 	?>
-	
-	<script type="text/javascript">
-	 tinymce.init({
-		selector: '.tinyMCEditor',
-		inline: true,
-		plugins: [
-			'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
-			'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-			'table contextmenu directionality emoticons template textcolor paste fullpage textcolor'
-		],
-		toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect | preview code',
-		toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
-		toolbar3: 'bullist numlist | table | hr removeformat | subscript superscript charmap',
-
-		menubar: false,
-		toolbar_items_size: 'small',
-		language: 'es',
-	 });
-</script>
 	<?php
 		foreach($rows as $row)
 		{
@@ -294,26 +284,12 @@
 	<?php
 			$colorCounter++;
 		}
-		foreach($tinymceArr as $i=>$num)
+
+		foreach($tinymceArr as $selector)
 		{
 	?>
 		<script type="text/javascript">
-			tinymce.init({
-				selector: '#ReportTableCell_<?php echo $i;?>_content',
-				inline: true,
-				plugins: [
-					'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
-					'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-					'table contextmenu directionality emoticons template textcolor paste textcolor'
-				],
-				toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect | preview code',
-				toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
-				toolbar3: 'bullist numlist | table | hr removeformat | subscript superscript charmap',
-
-				menubar: false,
-				toolbar_items_size: 'small',
-				language: 'es',
-			});
+			addEditorT('<?php echo $selector;?>');
 		</script>
 <?php
 		}

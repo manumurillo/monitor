@@ -70,4 +70,6 @@ Puede utilizar los comparadores (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;
 			'class'=>'CButtonColumn',
 		),
 	),
+	'summaryText'=>'Mostrando {start}-{end} de {page} resultados',
+	'emptyText'=>'Muy pronto...',
 )); ?>

@@ -1,3 +1,8 @@
+	var itemCounter	= 0;
+	var rowCounter 	= 0;
+	var cellCounter = 0;
+	var textCounter = 0;
+	
 $(document).ready(function() {
 	var itemCounter	= ($('tr.item').length);
 	var rowCounter 	= ($('tr.row').length);
@@ -14,6 +19,70 @@ $(document).ready(function() {
 		$(this).on("click",addText);
 	});
 	
+	//Se asigna a cada elemento con la clase .addTableButton la función addTable
+	$(".addTableButton").each(function (){
+		$(this).on("click",addTable);
+	});
+	
+	//Se asigna a cada elemento con id #deleteItem la función deleteItem
+	$("#deleteItem").each(function (){
+		$(this).on("click",deleteItem);
+	});
+	
+	//Se asigna a cada elemento con id #addTableRow la función addTableRow
+	$(document).on('click','#addTableRow',addTableRow);
+	
+	//Se asigna a cada elemento con id #delTableRow la función addTableRow
+	$(document).on('click','#delTableRow',delTableRow);
+	
+	//Se asigna al formulario #report-form la función validateForm
+	$("#report-form").each(function (){
+		$(this).on("submit",validateForm);
+	});
+	
+	//Para los botones de Publicar/Guardar Borrador/Vista Previa
+	
+	//Si es nuevo reporte.
+	$("#saveReport, #saveReport1").on("click", function(event){
+		$('#Report_status').attr("value","1");
+		$('#report-form').attr("action", "/index.php?r=report/create");
+		$('#report-form').attr("target","_self");
+	});
+	
+	$("#publishReport, #publishReport1").on("click", function(event){
+		$('#Report_status').attr("value","2");
+		$('#report-form').attr("action", "/index.php?r=report/create");
+		$('#report-form').attr("target","_self");
+	});
+	
+	//Si el reporte será actualizado.
+	$("#saveReportUpdate, #saveReportUpdate1").on("click", function(event){
+		$('#Report_status').attr("value","1");
+		var reportId=$('#Report_id').val();
+		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
+		$('#report-form').attr("target","_self");
+	});	
+	
+	$("#publishReportUpdate, #publishReportUpdate1").on("click", function(event){
+		$('#Report_status').attr("value","2");
+		var reportId=$('#Report_id').val();
+		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
+		$('#report-form').attr("target","_self");
+	});	
+
+	//Vista previa
+	$("#previewReport, #previewReport1").on("click", function(event){
+		$('#report-form').attr("action", "/index.php?r=report/preview");
+		$('#report-form').attr("target","_blank");
+		$('#report-form').attr("method","POST");
+	});
+	
+	//Se asigna la funcion AddAutoComplete a los elementos con clase .autoComplete
+	$(".autoComplete").each(function (){
+		$(this).on("click",AddAutoComplete);
+	});
+});
+
 	/* Función addText
 	 * Permite agregar el formulario para items tipo texto.
 	 */
@@ -54,7 +123,6 @@ $(document).ready(function() {
 		var id = "ReportText_"+textCounter+"_text";
 		$(child).children("div").eq(1).attr("id","ReportText_"+textCounter+"_text").html('');
 		$(child).children("div").eq(1).attr("class","isRequired");
-		$(child).children("div").eq(1).css('width:100%; border:1px solid #666;');
 		
 		/*
 		 * Se obtiene el padre (a nivel 2) del botón que activó el evento (en este caso, la fila tr) 
@@ -70,7 +138,7 @@ $(document).ready(function() {
 			 plugins:
 					[	"advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
 						"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-						"table contextmenu directionality emoticons template textcolor paste fullpage textcolor"
+						"table contextmenu directionality emoticons template textcolor paste textcolor"
 					],
 			toolbar1:	"undo redo | styleselect formatselect fontselect fontsizeselect | preview code",
 			toolbar2: 	"forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink",
@@ -85,11 +153,6 @@ $(document).ready(function() {
 		$('#countItems').html('Total de items:'+($('tr.item').length));
 		$('#countTexts').html('Total de textos:'+($('div.text').length));
 	}
-	
-	//Se asigna a cada elemento con la clase .addTableButton la función addTable
-	$(".addTableButton").each(function (){
-		$(this).on("click",addTable);
-	});
 	
 	/* Función addTable
 	 * Permite agregar el formulario para items tipo table.
@@ -214,20 +277,81 @@ $(document).ready(function() {
 										console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellsExist+"_content");
 										$("#ReportTableCell_"+cellsExist+"_content").on("click",AddAutoComplete);
 									}
-								}
+								}	
 							}		
 						});
 					return false;
 				});
 		
 			});
+	}
+	
+	/*
+	 * Función que asigna el editor de texto a las celdas.
+	 * @param int cellInit indica el contador de la celda de inicio
+	 * @param int cellFin  indica el contador de la celda final
+	 */
+	function addTextEditor(cellInit, cellFin){
+		for(cellInit; cellInit<=cellFin; cellInit++)
+		{
+			tinymce.init({
+				selector: '#ReportTableCell_'+cellInit+'_content',
+				inline: true,
+				plugins: [
+					'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
+					'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+					'table contextmenu directionality emoticons template textcolor paste textcolor'
+				],
+				toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect | preview code',
+				toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
+				toolbar3: 'bullist numlist | table | hr removeformat | subscript superscript charmap',
+
+				menubar: false,
+				toolbar_items_size: 'small',
+				language: 'es'
+			});
+			$('input[type=hidden][name=ReportTableCell_'+cellInit+'_content]').attr('class','content');
+			
+			//Asignación del evento autocomplete si la celda lo requiere.
+			if(/autoComplete/.test($("#ReportTableCell_"+cellInit+"_content").attr("class")))
+			{
+				console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellInit+"_content");
+				$("#ReportTableCell_"+cellInit+"_content").on("click",AddAutoComplete);
+			}
 		}
+	}
+	
+	/*
+	 * Función que asigna el el evento autocomplete a la celda específica.
+	 */
+	function AddAutoComplete()
+	{
+		var par = $(this).parent();
+		var col=$(par).children('.column').val();
+		$(this).autocomplete({
+			source: function(request, response) {
+				$.ajax({
+					type: 'GET',
+					url: '/index.php?r=report/autocompleteCell',
+					data: {
+						columnID: col, 
+						term: request.term
+					},
+					dataType:"json",
+					success: function(data) {
+						response(data);
+					},
+				})
+			},
+			minLength: 1, 
+		});	
+	}
 	
 	/*
 	 * Función que asigna a cada elemento con id deleteItem
 	 * el evento que permite eliminar el item del reporte
 	 */
-	$(document).on('click','#deleteItem',function(){
+	function deleteItem(){
 		//Se obtiene el padre  (a nivel 3) del botón seleccionado y se elimina
 		var parent = $(this).parents().get(2);
 		$(parent).remove();
@@ -237,13 +361,13 @@ $(document).ready(function() {
 		$('#countRows').html('Total de filas: '+($('tr.row').length));
 		$('#countCells').html('Total de celdas: '+($('div.content').length));
 		$('#countTexts').html('Total de textos:'+($('div.text').length));
-	});
+	}
 	
 	/*
 	 * Función que asigna a cada elemento con id addTableRow
 	 * el evento que permite insertar una fila en un item tipo Tabla
 	 */
-	$(document).on('click','#addTableRow',function(){
+	function addTableRow(){
 		console.log('Iniciando clonacion');
 
 		//Se identifica al padre que contiene al elemento addTableRow (en este caso, <tr>
@@ -266,7 +390,7 @@ $(document).ready(function() {
 		$newItem.children('#cells').each(function(){
 			//Se aumenta el valor de cellCounter.
 			cellCounter++;
-			console.log("CellCounter: "+cellCounter+"\n"); 
+			//console.log("CellCounter: "+cellCounter+"\n"); 
 			//Se asignan los nuevos atributos de cada campo
 			var oldDiv = $(this).children("div").eq(0);
 			if(/autoComplete/.test($(oldDiv).attr("class")))
@@ -330,13 +454,13 @@ $(document).ready(function() {
 				$('#'+nvoIDC).css('color', color).val(color);
 			}
 		});				
-	});
+	}
 	
 	/*
 	 * Función que asigna a cada elemento con id delTableRow
 	 * el evento que permite eliminar una fila específica.
 	 */
-	$(document).on('click','#delTableRow',function(){
+	function delTableRow(){
 	
 		//Se obtiene el total de filas que tiene la tabla, si es la última, envía un mensaje de confirmación
 		var parent2 = $(this).parents().get(5);
@@ -365,14 +489,14 @@ $(document).ready(function() {
 			$('#countRows').html('Total de filas: '+($('tr.row').length));
 			$('#countCells').html('Total de celdas: '+($('div.content').length));	
 		}
-	});
-
+	}
+	
 	/*
 	 * Función que valida el formulario onSubmit
 	 * @return boolean band regresa falso la validación tuvo errores.
      * @return boolean band verdadero si la validación no tuvo errores.	 
 	 */ 
-	$("#report-form").on("submit", function(event){
+	function validateForm(event){
 		var band = true;
 		
 		//Validamos cada elemento con la clase isRequired (se aplica sólo en Items tipo texto)
@@ -424,106 +548,34 @@ $(document).ready(function() {
 		});
 		
 		return band;
-	});
-	
-	//Para los botones de Publicar/Guardar Borrador/Vista Previa
-	
-	//Si es nuevo reporte.
-	$("#saveReport, #saveReport1").on("click", function(event){
-		$('#Report_status').attr("value","1");
-		$('#report-form').attr("action", "/index.php?r=report/create");
-		$('#report-form').attr("target","_self");
-	});
-	
-	$("#publishReport, #publishReport1").on("click", function(event){
-		$('#Report_status').attr("value","2");
-		$('#report-form').attr("action", "/index.php?r=report/create");
-		$('#report-form').attr("target","_self");
-	});
-	
-	//Si el reporte será actualizado.
-	$("#saveReportUpdate, #saveReportUpdate1").on("click", function(event){
-		$('#Report_status').attr("value","1");
-		var reportId=$('#Report_id').val();
-		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
-		$('#report-form').attr("target","_self");
-	});	
-	
-	$("#publishReportUpdate, #publishReportUpdate1").on("click", function(event){
-		$('#Report_status').attr("value","2");
-		var reportId=$('#Report_id').val();
-		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
-		$('#report-form').attr("target","_self");
-	});	
-
-	//Vista previa
-	$("#previewReport, #previewReport1").on("click", function(event){
-		$('#report-form').attr("action", "/index.php?r=report/preview");
-		$('#report-form').attr("target","_blank");
-	});
+	}
 	
 	/*
-	 * Función que asigna el editor de texto a las celdas.
+	 * Función que asigna el editor de texto a items, tablas y celdas.
 	 * @param int cellInit indica el contador de la celda de inicio
 	 * @param int cellFin  indica el contador de la celda final
 	 */
-	function addTextEditor(cellInit, cellFin){
-		for(cellInit; cellInit<=cellFin; cellInit++)
-		{
-			tinymce.init({
-				selector: '#ReportTableCell_'+cellInit+'_content',
-				inline: true,
-				plugins: [
-					'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
-					'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-					'table contextmenu directionality emoticons template textcolor paste textcolor'
-				],
-				toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect | preview code',
-				toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
-				toolbar3: 'bullist numlist | table | hr removeformat | subscript superscript charmap',
+	function addEditorT(selector){
+		tinymce.init({
+			selector: '#'+selector,
+			inline: true,
+			plugins: [
+				'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
+				'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+				'table contextmenu directionality emoticons template textcolor paste textcolor'
+			],
+			toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect | preview code',
+			toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
+			toolbar3: 'bullist numlist | table | hr removeformat | subscript superscript charmap',
 
-				menubar: false,
-				toolbar_items_size: 'small',
-				language: 'es'
-			});
-			$('input[type=hidden][name=ReportTableCell_'+cellInit+'_content]').attr('class','content');
-			
-			//Asignación del evento autocomplete si la celda lo requiere.
-			if(/autoComplete/.test($("#ReportTableCell_"+cellInit+"_content").attr("class")))
-			{
-				console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellInit+"_content");
-				$("#ReportTableCell_"+cellInit+"_content").on("click",AddAutoComplete);
-			}
+			menubar: false,
+			toolbar_items_size: 'small',
+			language: 'es'
+		});
+		//Asignación del evento autocomplete si la celda lo requiere.
+		if(/autoComplete/.test($("#"+selector).attr("class")))
+		{
+			console.log("Asignado el evento autocomplete a: "+selector);
+			$("#"+selector).on("click",AddAutoComplete);
 		}
 	}
-	
-	/*
-	 * Función que asigna el el evento autocomplete a la celda específica.
-	 */
-	function AddAutoComplete()
-	{
-		var par = $(this).parent();
-		var col=$(par).children('.column').val();
-		$(this).autocomplete({
-			source: function(request, response) {
-				$.ajax({
-					type: 'GET',
-					url: '/index.php?r=report/autocompleteCell',
-					data: {
-						columnID: col, 
-						term: request.term
-					},
-					dataType:"json",
-					success: function(data) {
-						response(data);
-					},
-				})
-			},
-			minLength: 1, 
-		});	
-	}
-	
-	$(".autoComplete").each(function (){
-		$(this).on("click",AddAutoComplete);
-	});
-});

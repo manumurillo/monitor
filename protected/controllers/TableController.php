@@ -270,7 +270,7 @@ class TableController extends Controller
 							plugins: [
 								'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 								'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-								'table contextmenu directionality emoticons template textcolor paste fullpage textcolor'
+								'table contextmenu directionality emoticons template textcolor paste textcolor'
 							],
 							toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect',
 							toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
@@ -309,7 +309,7 @@ class TableController extends Controller
 							plugins: [
 								'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 								'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-								'table contextmenu directionality emoticons template textcolor paste fullpage textcolor'
+								'table contextmenu directionality emoticons template textcolor paste textcolor'
 							],
 							toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect',
 							toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
@@ -364,7 +364,7 @@ class TableController extends Controller
 							plugins: [
 								'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 								'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-								'table contextmenu directionality emoticons template textcolor paste fullpage textcolor'
+								'table contextmenu directionality emoticons template textcolor paste textcolor'
 							],
 							toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect',
 							toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
