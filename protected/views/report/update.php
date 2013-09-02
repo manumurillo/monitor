@@ -11,7 +11,6 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Ver todos los reportes', 'url'=>array('index')),
 	array('label'=>'Crear un nuevo reporte', 'url'=>array('create')),
-	array('label'=>'Ver reporte', 'url'=>array('view', 'id'=>$report->id)),
 	array('label'=>'Administrar reportes', 'url'=>array('admin')),
 );
 ?>

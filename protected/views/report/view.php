@@ -12,7 +12,28 @@ $this->menu=array(
 	array('label'=>'Eliminar reporte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$report->id),'confirm'=>'¿Está seguro de eliminar este Reporte?')),
 	array('label'=>'Administrar Reportes', 'url'=>array('admin')),
 );
-$itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colorCounter = 0;									
+$itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colorCounter = 0;
+
+function toLink($text)
+{
+	$patron = '/<a.*<\/a>/';
+	$url= preg_replace_callback($patron, 'toLinkAgain', $text, -1);
+	return $url;
+}
+
+function toLinkAgain($n)
+{
+	if (is_array($n))
+		$n = $n[0];
+	$patron1 = '/\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[A-Z0-9+&@#\/%=~_|]/i';
+	preg_match($patron1,$n,$coincidencias);
+	$contenido = strip_tags($n);
+	$contenido2 = chunk_split($contenido, 39, "<br/>\t");
+	$enlace= $coincidencias[0];
+	$return = "<a href='$enlace' target='_blank'>$contenido2</a>";
+	return $return;
+}
+	
 ?>
 <table>
 	<thead>
@@ -82,8 +103,8 @@ $itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colo
 							{
 					?>
 						<td valign="middle" style="border: 1px solid #82c7e6;">
-							<span style="font-family:arial; color:<?php echo CHtml::encode($cells[$cellCounter]->color);?>; font-size:11px;">
-								<?php echo $cells[$cellCounter]->content;?>
+							<span style="word-wrap: break-word; font-family:arial; color:<?php echo CHtml::encode($cells[$cellCounter]->color);?>; font-size:11px;">
+								<?php echo toLink($cells[$cellCounter]->content);?>
 							</span>
 						</td>
 					<?php 

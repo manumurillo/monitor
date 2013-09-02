@@ -29,7 +29,7 @@ $itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colo
 				{
 		?>
 		<tr>
-			<td colspan="2">
+			<td colspan="2" align="left" valign="middle" >
 				<span style="font-family:arial; color:#545454; font-size:12px;">
 					<?php echo $texts[$textCounter]['text'];?>
 				</span>
@@ -43,7 +43,7 @@ $itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colo
 				{
 		?>
 		<tr>
-			<td colspan="2">
+			<td align="left" valign="middle" colspan="2">
 		<?php
 					$_table = Table::model()->findByPk($rTables[$tableCounter]['table_id']);
 					$_columns = $_table->columns;
@@ -58,7 +58,7 @@ $itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colo
 					foreach($_columns as $column)
 					{
 					?>
-						<td valign="middle" style="border-right: 1px; border-right-style: solid; border-right-color: #82c7e6; border-bottom: 1px solid #82c7e6;" width="<?php echo CHtml::encode($column->width); ?>px">
+						<td align="center" valign="middle" style="border-right: 1px; border-right-style: solid; border-right-color: #82c7e6; border-bottom: 1px solid #82c7e6;" width="<?php echo CHtml::encode($column->width); ?>px">
 							<font color="<?php echo CHtml::encode($column->color); ?>"><b><?php echo CHtml::encode($column->title); ?></b></font>
 						</td>
 					<?php 
@@ -69,12 +69,12 @@ $itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colo
 						for($r=1; $r<=$rTables[$tableCounter]['rowCounter']; $r++)
 						{
 					?>
-					<tr align="center">
+					<tr>
 					<?php
 							for($c=1; $c<=$_table->columnsCount; $c++)
 							{
 					?>
-						<td align="center" valign="middle" style="border-right: 1px; border-right-style: solid; border-right-color: #82c7e6; border-bottom: 1px solid #82c7e6;">
+						<td align="left" valign="middle" style="border-right: 1px; border-right-style: solid; border-right-color: #82c7e6; border-bottom: 1px solid #82c7e6;">
 							<span style="font-family:arial; color:<?php echo CHtml::encode($rows[$rowCounter]['color']);?>; font-size:11px;">
 								<?php echo $cells[$cellCounter]['content'];?>
 							</span>

@@ -1,8 +1,3 @@
-	var itemCounter	= 0;
-	var rowCounter 	= 0;
-	var cellCounter = 0;
-	var textCounter = 0;
-	
 $(document).ready(function() {
 	var itemCounter	= ($('tr.item').length);
 	var rowCounter 	= ($('tr.row').length);
@@ -25,9 +20,7 @@ $(document).ready(function() {
 	});
 	
 	//Se asigna a cada elemento con id #deleteItem la función deleteItem
-	$("#deleteItem").each(function (){
-		$(this).on("click",deleteItem);
-	});
+	$(document).on('click','#deleteItem',deleteItem);
 	
 	//Se asigna a cada elemento con id #addTableRow la función addTableRow
 	$(document).on('click','#addTableRow',addTableRow);
@@ -40,48 +33,11 @@ $(document).ready(function() {
 		$(this).on("submit",validateForm);
 	});
 	
-	//Para los botones de Publicar/Guardar Borrador/Vista Previa
-	
-	//Si es nuevo reporte.
-	$("#saveReport, #saveReport1").on("click", function(event){
-		$('#Report_status').attr("value","1");
-		$('#report-form').attr("action", "/index.php?r=report/create");
-		$('#report-form').attr("target","_self");
-	});
-	
-	$("#publishReport, #publishReport1").on("click", function(event){
-		$('#Report_status').attr("value","2");
-		$('#report-form').attr("action", "/index.php?r=report/create");
-		$('#report-form').attr("target","_self");
-	});
-	
-	//Si el reporte será actualizado.
-	$("#saveReportUpdate, #saveReportUpdate1").on("click", function(event){
-		$('#Report_status').attr("value","1");
-		var reportId=$('#Report_id').val();
-		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
-		$('#report-form').attr("target","_self");
-	});	
-	
-	$("#publishReportUpdate, #publishReportUpdate1").on("click", function(event){
-		$('#Report_status').attr("value","2");
-		var reportId=$('#Report_id').val();
-		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
-		$('#report-form').attr("target","_self");
-	});	
-
-	//Vista previa
-	$("#previewReport, #previewReport1").on("click", function(event){
-		$('#report-form').attr("action", "/index.php?r=report/preview");
-		$('#report-form').attr("target","_blank");
-		$('#report-form').attr("method","POST");
-	});
-	
 	//Se asigna la funcion AddAutoComplete a los elementos con clase .autoComplete
 	$(".autoComplete").each(function (){
 		$(this).on("click",AddAutoComplete);
 	});
-});
+
 
 	/* Función addText
 	 * Permite agregar el formulario para items tipo texto.
@@ -122,7 +78,7 @@ $(document).ready(function() {
 		//Se cambia nombre, id y clase al campo ReportText->text.
 		var id = "ReportText_"+textCounter+"_text";
 		$(child).children("div").eq(1).attr("id","ReportText_"+textCounter+"_text").html('');
-		$(child).children("div").eq(1).attr("class","isRequired");
+		$(child).children("div").eq(1).attr("class","isRequired text");
 		
 		/*
 		 * Se obtiene el padre (a nivel 2) del botón que activó el evento (en este caso, la fila tr) 
@@ -138,7 +94,7 @@ $(document).ready(function() {
 			 plugins:
 					[	"advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
 						"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-						"table contextmenu directionality emoticons template textcolor paste textcolor"
+						"table directionality emoticons template textcolor paste textcolor"
 					],
 			toolbar1:	"undo redo | styleselect formatselect fontselect fontsizeselect | preview code",
 			toolbar2: 	"forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink",
@@ -226,6 +182,7 @@ $(document).ready(function() {
 			jQuery('body').on('change','#ReportTable_'+itemCounter+'_table_id',
 			function()
 				{
+				$('#ReportTable_'+itemCounter+'_table_id option[value='+$(this).val()+']').attr("selected",true); 
 				jQuery.ajax(
 						{
 						'type': 'POST',
@@ -300,7 +257,7 @@ $(document).ready(function() {
 				plugins: [
 					'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 					'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-					'table contextmenu directionality emoticons template textcolor paste textcolor'
+					'table directionality emoticons template textcolor paste textcolor'
 				],
 				toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect | preview code',
 				toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
@@ -319,32 +276,6 @@ $(document).ready(function() {
 				$("#ReportTableCell_"+cellInit+"_content").on("click",AddAutoComplete);
 			}
 		}
-	}
-	
-	/*
-	 * Función que asigna el el evento autocomplete a la celda específica.
-	 */
-	function AddAutoComplete()
-	{
-		var par = $(this).parent();
-		var col=$(par).children('.column').val();
-		$(this).autocomplete({
-			source: function(request, response) {
-				$.ajax({
-					type: 'GET',
-					url: '/index.php?r=report/autocompleteCell',
-					data: {
-						columnID: col, 
-						term: request.term
-					},
-					dataType:"json",
-					success: function(data) {
-						response(data);
-					},
-				})
-			},
-			minLength: 1, 
-		});	
 	}
 	
 	/*
@@ -434,7 +365,7 @@ $(document).ready(function() {
 		addTextEditor(cellInit+1, cellFin+1);
 								
 		//Se actualizan los mensajes de filas y celdas.
-		$('#countRows').html('Total devfilas: '+($('tr.row').length));
+		$('#countRows').html('Total de filas: '+($('tr.row').length));
 		$('#countCells').html('Total areas: '+($('div.content').length));
 		
 		//Se asigna el evento wColorPicker a la nueva fila.
@@ -505,6 +436,7 @@ $(document).ready(function() {
 			if ($(this).html()=='<p><br data-mce-bogus="1"></p>' || $(this).html()=='')
 			{
 				var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>El texto no debe quedar vacío. De ser así, elimine el item.</font><br>";
+				console.log("El texto no debe quedar vacío. De ser así, elimine el item.");
 				var parent = $(this).parents().get(0);
 				$(parent).children("div:last").html(ERROR_MESSAGE);
 				band = false;		
@@ -520,6 +452,7 @@ $(document).ready(function() {
 		if($('#Report_title').val()=='')
 		{
 			var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>Debe escribir el título del reporte.</font><br>";
+			console.log("Debe escribir el título del reporte.");
 			$('#errorTitle').html(ERROR_MESSAGE);	
 			$('#Report_title').focus();
 			band = false;
@@ -535,6 +468,7 @@ $(document).ready(function() {
 			if ($(this).val()=='')
 			{
 				var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>Debe seleccionar una tabla o elimine el item.</font><br>";
+				console.log("Debe seleccionar una tabla o elimine el item.>>"+$(this).val()+"<<");
 				var parent = $(this).parents().get(0);
 				$(parent).children("#errorTable").html(ERROR_MESSAGE);
 				$(this).focus();
@@ -550,6 +484,60 @@ $(document).ready(function() {
 		return band;
 	}
 	
+		//Para los botones de Publicar/Guardar Borrador/Vista Previa
+	
+	//Si es nuevo reporte.
+	$("#saveReport, #saveReport1").on("click", function(event){
+		$('#Report_status').attr("value","1");
+		$('#report-form').attr("action", "/index.php?r=report/create");
+		$('#report-form').attr("target","_self");
+	});
+	
+	$("#publishReport, #publishReport1").on("click", function(event){
+		$('#Report_status').attr("value","2");
+		$('#report-form').attr("action", "/index.php?r=report/create");
+		$('#report-form').attr("target","_self");
+	});
+	
+	
+	//Si el reporte será actualizado.
+	$(document).on("click", "#saveReportUpdate, #saveReportUpdate1", function(event){
+		$('#Report_status').attr("value","1");
+		var reportId=$('#Report_id').val();
+		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
+		$('#report-form').attr("target","_self");
+		$('#report-form').submit();
+	});	
+	
+	$(document).on("click", "#publishReportUpdate, #publishReportUpdate1", function(event){
+		$('#Report_status').attr("value","2");
+		var reportId=$('#Report_id').val();
+		$('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
+		$('#report-form').attr("target","_self");
+		$('#report-form').submit();
+	});
+	
+	//Vista previa
+	$(document).on('click','#previewReport, #previewReport1', function(){
+		var reportClone = $("#report-form").clone(true);
+		$(reportClone).attr("id","newReportForm");
+		$(reportClone).attr("action","/index.php?r=report/preview");
+		$(reportClone).attr("target","_blank");
+		$(reportClone).css("display","none");
+
+		var parent = $('#report-form').parents().get(0);
+		$(parent).after(reportClone);
+		
+		$("#newReportForm").find("div.text, div.content").each(function(){
+			var nameHidden = $(this).attr("id");
+			$('input[type=hidden][name='+nameHidden+']').val($(this).html());
+		});
+		$("#newReportForm").submit();
+		$("#newReportForm").remove();
+		
+	});
+	
+});	
 	/*
 	 * Función que asigna el editor de texto a items, tablas y celdas.
 	 * @param int cellInit indica el contador de la celda de inicio
@@ -562,7 +550,7 @@ $(document).ready(function() {
 			plugins: [
 				'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 				'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-				'table contextmenu directionality emoticons template textcolor paste textcolor'
+				'table directionality emoticons template textcolor paste textcolor'
 			],
 			toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect | preview code',
 			toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
@@ -575,7 +563,52 @@ $(document).ready(function() {
 		//Asignación del evento autocomplete si la celda lo requiere.
 		if(/autoComplete/.test($("#"+selector).attr("class")))
 		{
-			console.log("Asignado el evento autocomplete a: "+selector);
+			//console.log("Asignado el evento autocomplete a: "+selector);
 			$("#"+selector).on("click",AddAutoComplete);
 		}
+	}
+	
+	/*
+	 * Función que asigna el el evento autocomplete a la celda específica.
+	 */
+	function AddAutoComplete()
+	{
+		var par = $(this).parent();
+		var col=$(par).children('.column').val();
+		$(this).autocomplete({
+			source: function(request, response) {
+				$.ajax({
+					type: 'GET',
+					url: '/index.php?r=report/autocompleteCell',
+					data: {
+						columnID: col, 
+						term: request.term
+					},
+					dataType:"json",
+					success: function(data) {
+						response(data);
+					},
+				})
+			},
+			minLength: 1, 
+		});	
+	}
+	
+	function addColorPicker(colorCounter, input, colorInit)
+	{
+		$('#wColorPicker'+colorCounter).wColorPicker({
+				initColor: colorInit,
+				effect: 'slide', 
+				theme: 'red',
+				mode: 'click',
+				onSelect: function(color){
+					$('#'+input).css('color', color).val(color);
+				},
+				onMouseover: function(color){
+					$('#'+input).css('color', color).val(color);
+				},
+				onMouseout: function(color){
+					$('#'+input).css('color', color).val(color);
+				}
+			});
 	}

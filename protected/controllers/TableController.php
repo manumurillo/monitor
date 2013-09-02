@@ -285,7 +285,7 @@ class TableController extends Controller
 					<tr>";
 				foreach($columns as $column)
 				{
-					echo "<th width='".CHtml::encode($column->width)."' align='left' valign='center'>
+					echo "<th width='".CHtml::encode($column->width)."' align='center' valign='middle'>
 							<font color='".CHtml::encode($column->color)."'><b>".CHtml::encode($column->title)."</b></font>
 						</th>";
 				}
@@ -297,7 +297,7 @@ class TableController extends Controller
 				foreach($columns as $column)
 				{
 					$cellCounter++;
-				echo "<th id='cells' align='left' valign='top'>
+				echo "<th id='cells' align='left' valign='middle'>
 						<div style='width:100%; height:100%' id='ReportTableCell_".$cellCounter."_content' class='content'></div>
 						<input type='hidden' id='ReportTableCell_".$cellCounter."_column_id' class='column' name='ReportTableCell[".$cellCounter."][column_id]' value='".$column->id."'>
 						<input type='hidden' id='ReportTableCell_".$cellCounter."_row_id' name='ReportTableCell[".$cellCounter."][row_id]' value='0'>

@@ -42,8 +42,9 @@
 						echo CHtml::submitButton('', array('id'=> 'saveReportUpdate', 'class'=>'saveDraft'));
 						echo ' '.CHtml::submitButton('', array('id'=> 'publishReportUpdate', 'class'=>'publishAndSave'));
 					}
-					echo ' '.CHtml::submitButton('', array('id'=>'previewReport', 'class'=>'preview')); 
+					//echo ' '.CHtml::submitButton('', array('id'=>'previewReport', 'class'=>'preview')); 
 				?>
+					<input type="button" id="previewReport" class="preview"/>
 				</th>
 			</tr>
 			<tr>
@@ -172,7 +173,7 @@
 									for($c=1; $c<=$_table->columnsCount; $c++)
 									{
 							?>
-								<th id="cells">
+								<th id="cells" align="left" valign="middle">
 									<?php 
 										if($autoCompleteArr[$c])
 											echo "<div id='ReportTableCell_".$cellCounter."_content' class='autoComplete content'>".$cells[$cellCounter]->content."</div>";
@@ -188,7 +189,7 @@
 										$cellCounter++;
 									}							
 							?>
-							<th id="cellControls" align="left" valign="middle">
+							<th align="left" valign="middle" id="cellControls" align="left" valign="middle">
 								<div id="wColorPicker<?php echo $rowCounter; ?>"></div>
 								<?php echo $form->textField($rows[$rowCounter],"[$rowCounter]color", array('size'=>'8','maxlength'=>'7'))."<br>";
 									echo $form->hiddenField($rows[$rowCounter],"[$rowCounter]id");
@@ -202,7 +203,7 @@
 								}
 							?>
 							<tr>
-								<th colspan="<?php echo CHtml::encode($_table->columnsCount)+1; ?>">						
+								<th align="left" valign="middle" colspan="<?php echo CHtml::encode($_table->columnsCount)+1; ?>">						
 									<?php 
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]id");
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]rtable_id"); 
@@ -248,8 +249,9 @@
 						echo CHtml::submitButton('', array('id'=> 'saveReportUpdate1', 'class'=>'saveDraft'));
 						echo ' '.CHtml::submitButton('', array('id'=> 'publishReportUpdate1', 'class'=>'publishAndSave'));
 					}
-					echo ' '.CHtml::submitButton('', array('id'=>'previewReport1', 'class'=>'preview')); 
+					//echo ' '.CHtml::submitButton('', array('id'=>'previewReport1', 'class'=>'preview')); 
 				?>
+					<input type="button" id="previewReport1" class="preview"/>
 				</th>
 			</tr>
 		</tfoot>
@@ -260,39 +262,24 @@
 	if($report->isNewRecord==false)
 	{
 	?>
+	<script type="text/javascript">
 	<?php
 		foreach($rows as $row)
 		{
 	?>
-		<script type="text/javascript">
-			$('#wColorPicker<?php echo $colorCounter; ?>').wColorPicker({
-				initColor: '<?php echo CHtml::encode($row->color); ?>',
-				effect: 'slide', 
-				theme: 'red',
-				mode: 'click',
-				onSelect: function(color){
-					$('#ReportTableRow_<?php echo $colorCounter; ?>_color').css('color', color).val(color);
-				},
-				onMouseover: function(color){
-					$('#ReportTableRow_<?php echo $colorCounter; ?>_color').css('color', color).val(color);
-				},
-				onMouseout: function(color){
-					$('#ReportTableRow_<?php echo $colorCounter; ?>_color').css('color', color).val(color);
-				}
-			});
-		</script>
+		addColorPicker(<?php echo $colorCounter; ?>, 'ReportTableRow_<?php echo $colorCounter; ?>_color' ,'<?php echo CHtml::encode($row->color); ?>');
 	<?php
 			$colorCounter++;
 		}
-
 		foreach($tinymceArr as $selector)
 		{
 	?>
-		<script type="text/javascript">
-			addEditorT('<?php echo $selector;?>');
-		</script>
+		addEditorT('<?php echo $selector;?>');	
 <?php
 		}
+	?>
+	</script>
+<?php
 	}
 	?>		
 	<table id="auxTable">
