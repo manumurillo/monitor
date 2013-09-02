@@ -5538,3 +5538,906 @@ REQUEST_URI=/index.php?r=report/update&id=2
 in C:\xampp\htdocs\monitor_axa\protected\views\report\_form.php (132)
 in C:\xampp\htdocs\monitor_axa\protected\views\report\update.php (33)
 in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (424)
+2013/09/02 12:08:39 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:08:59 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (234)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:08:59 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (301)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:08:59 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (301)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:08:59 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (326)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:08:59 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (326)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:00 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:00 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:00 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:00 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (301)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (612)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:09:53 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:12:19 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:12:37 [error] [php] Undefined variable: _report (C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php:190)
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): ReportController->runAction()
+#1 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): ReportController->filterAccessControl()
+#4 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CController.php(265): ReportController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): ReportController->run()
+#8 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\monitor_axa\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=report/preview
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (190)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update=2".' in C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CController.php(270): CController->missingAction('update=2')
+#1 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('update=2')
+#2 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('report/update=2')
+#3 C:\xampp\htdocs\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\monitor_axa\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=report/update=2
+---
+2013/09/02 12:13:20 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:12 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:20 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:21 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (612)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:21 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:21 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:21 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:14:21 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:15:26 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:15:30 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (234)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:15:30 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (301)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:18:17 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:18:17 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:18:17 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:22:21 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (234)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (301)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (301)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (326)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (326)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (367)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:27:19 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (234)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:28:15 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:28:36 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:28:40 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (234)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:29:00 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:29:00 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (712)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:35:46 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (234)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:42:46 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (234)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (215)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 12:55:24 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:47 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:47 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:47 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:47 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:47 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:47 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:47 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:01:48 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:09 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:09 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:09 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:09 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:09 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:09 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:09 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:10 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:11 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:27 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:28 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:28 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:28 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:13:29 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:19:30 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:20:36 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:21:35 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:22:02 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (139)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (612)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:13 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (612)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:15 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:29 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:30 [warning] [application] Failed to set unsafe attribute "id" of "Report".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (494)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:30 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:30 [warning] [application] Failed to set unsafe attribute "id" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:30 [warning] [application] Failed to set unsafe attribute "rowCounter" of "ReportTable".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (547)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:31 [warning] [application] Failed to set unsafe attribute "id" of "ReportTableRow".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (590)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:31 [warning] [application] Failed to set unsafe attribute "id" of "ReportItem".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (508)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:31 [warning] [application] Failed to set unsafe attribute "id" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 13:23:31 [warning] [application] Failed to set unsafe attribute "text" of "ReportText".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
+in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
