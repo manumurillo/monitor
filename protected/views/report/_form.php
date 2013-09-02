@@ -129,12 +129,8 @@
 									<?php 
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]id");
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]rtable_id"); 
-										echo "<b>Descripci&oacute;n: </b>";
-										if($texts[$textCounter]->text!='')
-											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
-										else
-											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
-										
+										echo "<span><input class='showHide' id='showHide".$textCounter."' type='button' value='' onClick='showHide(\"ReportText_".$textCounter."_text\", \"showHide".$textCounter."\")'/></span><b> Descripci&oacute;n: </b>";
+										echo "<div style='display:none' id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
 										$tinymceArr[$tinyCounter]='ReportText_'.$textCounter.'_text';
 										$tinyCounter++;
 										$textCounter++;
@@ -207,12 +203,8 @@
 									<?php 
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]id");
 										echo $form->hiddenField($texts[$textCounter],"[$textCounter]rtable_id"); 
-										echo "<b>Pie de tabla: </b><br>";
-										if($texts[$textCounter]->text!='')
-											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
-										else
-											echo "<div id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
-										
+										echo "<span><input class='showHide' id='showHide".$textCounter."' type='button' value='' onClick='showHide(\"ReportText_".$textCounter."_text\", \"showHide".$textCounter."\")'/></span><b>Pie de tabla: </b><br>";
+										echo "<div style='display:none' id='ReportText_".$textCounter."_text' class='text'>".$texts[$textCounter]->text."</div>";
 										$tinymceArr[$tinyCounter]='ReportText_'.$textCounter.'_text';
 										$tinyCounter++;
 										$textCounter++;

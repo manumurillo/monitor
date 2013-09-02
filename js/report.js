@@ -38,7 +38,6 @@ $(document).ready(function() {
 		$(this).on("click",AddAutoComplete);
 	});
 
-
 	/* Función addText
 	 * Permite agregar el formulario para items tipo texto.
 	 */
@@ -611,4 +610,15 @@ $(document).ready(function() {
 					$('#'+input).css('color', color).val(color);
 				}
 			});
+	}
+	
+	
+	function showHide(element, button) {
+		$("#"+element).toggle();
+		if ($("#"+element).css("display")==="block"){
+			$("#"+button).css('background','#ffffff url(../images/hide.png) no-repeat');
+		}
+		else{
+			$("#"+button).css('background','#ffffff url(../images/show.png) no-repeat');
+		}
 	}

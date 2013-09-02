@@ -258,10 +258,10 @@ class TableController extends Controller
 				echo "<table border='1'>
 					<tr>
 						<th colspan='".CHtml::encode($table->columnsCount+1)."' align='left' valign='center'>
-							Descripción:<br><br>
+							<span><input class='showHide' id='showHide".$textCounter."' type='button' value='' onClick='showHide(\"ReportText_".$textCounter."_text\", \"showHide".$textCounter."\")'/></span>Descripción:<br><br>
 							<input id='ReportText_".$textCounter."_id' type='hidden' value='0' name='ReportText[".$textCounter."][id]'>
 							<input id='ReportText_".$textCounter."_rtable_id' type='hidden' value='0' name='ReportText[".$textCounter."][rtable_id]'>
-							<div id='ReportText_".$textCounter."_text' class='text'>".$table->description."</div>
+							<div style='display:none' id='ReportText_".$textCounter."_text' class='text'>".$table->description."</div>
 						</th>
 						<script>	
 						tinymce.init({
@@ -352,10 +352,10 @@ class TableController extends Controller
 					</tr>
 					<tr>
 						<th colspan='".CHtml::encode($table->columnsCount+1)."' align='left' valign='center'>
-							Pie de tabla: <br><br>
+							<span><input class='showHide' id='showHide".$textCounter."' type='button' value='' onClick='showHide(\"ReportText_".$textCounter."_text\", \"showHide".$textCounter."\")'/></span>Pie de tabla: <br><br>
 							<input id='ReportText_".$textCounter."_id' type='hidden' value='0' name='ReportText[".$textCounter."][id]'>
 							<input id='ReportText_".$textCounter."_rtable_id' type='hidden' value='0' name='ReportText[".$textCounter."][rtable_id]'>
-							<div id='ReportText_".$textCounter."_text' class='text'>".$table->footer."</div>
+							<div style='display:none' id='ReportText_".$textCounter."_text' class='text'>".$table->footer."</div>
 						</th>
 						<script>		
 						tinymce.init({

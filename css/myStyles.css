@@ -40,3 +40,9 @@
 	color: #ffffff;
 }
 
+.showHide{
+	width: 20px;
+	height: 20px;
+	background: #ffffff url(../images/show.png) no-repeat;
+	color: #ffffff;
+}
