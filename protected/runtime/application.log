@@ -6468,3 +6468,6 @@ in C:\xampp\htdocs\monitor_axa\index.php (13)
 2013/09/02 19:03:59 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
 in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (146)
 in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/03 10:11:14 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)

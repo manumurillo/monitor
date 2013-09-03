@@ -42,6 +42,7 @@ jQuery(document).ready(function() {
 		jQuery(newTd).children("input").eq(1).attr("id",'TableColumn_'+newCounter+'_width').val('');
 		jQuery(newTd).children("input").eq(1).attr("class",'isRequiredWidth');
 		jQuery(newTd).children("input").eq(2).attr("id",'TableColumn_'+newCounter+'_position').val(newCounter);
+		jQuery(newTd).children("input").eq(2).attr("class",'integerOnly');
 		jQuery(newTd).children("select").eq(0).attr("id",'TableColumn_'+newCounter+'_autocomplete');
 		jQuery(newTd).children("input").eq(3).attr("id",'TableColumn_'+newCounter+'_color');	
 		jQuery(newTd).children("input").eq(4).attr("id",'TableColumn['+newCounter+'][id]');
@@ -121,22 +122,46 @@ jQuery(document).ready(function() {
 			
 			jQuery.each(jQuery('.isRequiredWidth'),function(){
 				//Verificamos su valor
+				var parent=jQuery(this).parent();
 				if (jQuery(this).val()==='')
 				{
-					var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>El ancho de la columna es necesario.</font><br>";
-					var parent=jQuery(this).parent();
+					var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>El ancho de la columna es necesario.</font><br>";					
 					jQuery(parent).children("#errorWidthColumn").html(ERROR_MESSAGE);
 					jQuery(this).focus();
 					band = false;		
 				}
 				else
 				{
+					if (isNaN(jQuery(this).val()))
+					{
+						var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>El ancho columna requiere sólo números.</font><br>";
+						jQuery(parent).children("#errorWidthColumn").html(ERROR_MESSAGE);
+						jQuery(this).focus();
+						band = false;	
+					}
+					else
+					{
+						var parent=jQuery(this).parent();
+						jQuery(parent).children("#errorWidthColumn").html("");
+					}
+				}
+			});	
+			jQuery.each(jQuery('.integerOnly'),function(){
+				var parent=jQuery(this).parent();
+				if (isNaN(jQuery(this).val()))
+				{
+					var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>La posición de columna requiere sólo números.</font><br>";
+					jQuery(parent).children("#errorPositionColumn").html(ERROR_MESSAGE);
+					jQuery(this).focus();
+					band = false;	
+				}
+				else
+				{
 					var parent=jQuery(this).parent();
-					jQuery(parent).children("#errorWidthColumn").html("");
+					jQuery(parent).children("#errorPositionColumn").html("");
 				}
 			});
 			
-		
 		if(jQuery('#Table_name').val()==='')
 		{
 			var ERROR_MESSAGE="<font style='color:#A60000; font-size:10px'>Debe escribir el nombre de la tabla.</font><br>";

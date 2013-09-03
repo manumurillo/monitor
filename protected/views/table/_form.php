@@ -53,7 +53,7 @@
 	<br>
 	<input type="button" value="Agregar columna" class="btnAgregarColumna" id="<?php echo $counter; ?>"><br>
 	<span id="count"></span> </p>
-		<table id="tblTabla" class="clsTabla">
+		<table id="tblTabla" rules="cols" frame="border" class="clsTabla">
 			<thead>
 				<tr>
 				<?php
@@ -77,21 +77,25 @@
 				?>
 					<th>
 						<div id="columnForm_<?php echo $counter; ?>">
-							<?php echo $form->labelEx($column,"[$i]title"); ?><br/>
-							<?php echo $form->textField($column,"[$i]title",array('class'=>'isRequiredTitle')); ?><br/>
-							<?php echo  "<span id='errorTitleColumn'></span>"; ?><br/><br/>
+							<?php echo $form->labelEx($column,"[$i]title"); ?>
+							<?php echo  "<span id='errorTitleColumn'></span>"; ?>
+							<?php echo $form->textField($column,"[$i]title",array('class'=>'isRequiredTitle')); ?>
 							
-							<?php echo $form->labelEx($column,"[$i]width"); ?><br/>
-							<?php echo $form->textField($column,"[$i]width",array('class'=>'isRequiredWidth')); ?><br/>
-							<?php echo  "<span id='errorWidthColumn'></span>"; ?><br/><br/>
-
-							<?php echo $form->labelEx($column,"[$i]position"); ?><br/>
-							<?php echo $form->textField($column,"[$i]position"); ?><br/><br/>
-
-							<?php echo $form->labelEx($column,"[$i]autocomplete"); ?><br/>
-							<?php echo $form->dropDownList($column,"[$i]autocomplete",Lookup::items('ReportTableColumnAutocomplete')); ?><br/><br/>
 							
-							<?php echo $form->labelEx($column,"[$i]color"); ?><br/>
+							<?php echo $form->labelEx($column,"[$i]width"); ?>
+							<?php echo  "<span id='errorWidthColumn'></span>"; ?>
+							<?php echo $form->textField($column,"[$i]width",array('class'=>'isRequiredWidth')); ?>
+							
+
+							<?php echo $form->labelEx($column,"[$i]position"); ?>
+							<?php echo  "<span id='errorPositionColumn'></span>"; ?>
+							<?php echo $form->textField($column,"[$i]position",array('class'=>'integerOnly')); ?>
+							
+							
+							<?php echo $form->labelEx($column,"[$i]autocomplete"); ?>
+							<?php echo $form->dropDownList($column,"[$i]autocomplete",Lookup::items('ReportTableColumnAutocomplete')); ?>
+							
+							<?php echo $form->labelEx($column,"[$i]color"); ?>
 							<div id="wColorPicker<?php echo $i; ?>"></div>
 							<div id=""></div>
 							
@@ -112,7 +116,7 @@
 									}
 								});
 							</script>
-							<?php echo $form->textField($column,"[$i]color"); ?>
+							<?php echo $form->textField($column,"[$i]color", array('maxlength'=>7, 'size'=>7)); ?>
 							<?php echo $form->hiddenField($column,"[$i]id",array('type'=>"hidden")); ?>
 							
 						</div>
@@ -134,24 +138,25 @@
 </div><!-- form -->
 
 	<div id="columnForm" style="display:none">
-		<?php echo $form->labelEx($column,"[$counter]title"); ?><br/>
-		<?php echo $form->textField($column,"[$counter]title",array('value'=>'')); ?><br/>
-		<?php echo  "<span id='errorTitleColumn'></span>"; ?><br/><br/>
+		<?php echo $form->labelEx($column,"[$counter]title"); ?>
+		<?php echo  "<span id='errorTitleColumn'></span>"; ?>
+		<?php echo $form->textField($column,"[$counter]title",array('value'=>'')); ?>	
 		
-		<?php echo $form->labelEx($column,"[$counter]width"); ?><br/>
-		<?php echo $form->textField($column,"[$counter]width",array('value'=>'')); ?><br/>
-		<?php echo  "<span id='errorWidthColumn'></span>"; ?><br/><br/>
+		<?php echo $form->labelEx($column,"[$counter]width"); ?>
+		<?php echo  "<span id='errorWidthColumn'></span>"; ?>
+		<?php echo $form->textField($column,"[$counter]width",array('value'=>'')); ?>		
 
-		<?php echo $form->labelEx($column,"[$counter]position"); ?><br/>
-		<?php echo $form->textField($column,"[$counter]position",array('value'=>'')); ?><br/><br/>
-
-		<?php echo $form->labelEx($column,"[$counter]autocomplete"); ?><br/>
-		<?php echo $form->dropDownList($column,"[$counter]autocomplete",Lookup::items('ReportTableColumnAutocomplete')); ?><br/><br/>
+		<?php echo $form->labelEx($column,"[$counter]position"); ?>
+		<?php echo  "<span id='errorPositionColumn'></span>"; ?>
+		<?php echo $form->textField($column,"[$counter]position",array('value'=>'')); ?>		
 		
-		<?php echo $form->labelEx($column,"[$counter]color"); ?><br/>
+		<?php echo $form->labelEx($column,"[$counter]autocomplete"); ?>
+		<?php echo $form->dropDownList($column,"[$counter]autocomplete",Lookup::items('ReportTableColumnAutocomplete')); ?>
+		
+		<?php echo $form->labelEx($column,"[$counter]color"); ?>
 		<div id="wColorPicker<?php echo $counter; ?>"></div>
 		<div id=""></div>
-		<?php echo $form->textField($column,"[$counter]color",array('value'=>'')); ?>
+		<?php echo $form->textField($column,"[$counter]color",array('value'=>'', 'maxlength'=>7, 'size'=>7)); ?>
 		<?php echo $form->hiddenField($column,"[$counter]id",array('type'=>"hidden", 'value'=>0)); ?>
 	</div>
 		<script type="text/javascript">

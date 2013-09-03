@@ -10,7 +10,6 @@
 	Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/jquery-ui-1.10.3.css');
 	Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/myStyles.css'); 
 	Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/wColorPicker.css');  
-	//Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'jquery-migrate-1.2.1');
 ?>
 
 <div class="form">
