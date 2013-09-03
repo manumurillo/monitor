@@ -15,7 +15,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'table-form',
 	'enableAjaxValidation'=>true,
-	'clientOptions'=>array('validateOnSubmit'=>true),
+	'clientOptions'=>array('validateOnSubmit'=>true)
 )); 
 	$counter=0;
 
@@ -184,6 +184,6 @@
 
 			menubar: false,
 			toolbar_items_size: 'small',
-			language: 'es',
+			language: 'es'
 		 });
 		</script>

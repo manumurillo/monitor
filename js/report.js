@@ -174,72 +174,67 @@ jQuery(document).ready(function() {
 		 */
 		var cellsExist=(jQuery('div.content').length);
 		var textsExist=(jQuery('div.text').length);
-		
+
 		//Función que agrega el evento onChange al select que muestra las tablas disponibles.
-		jQuery(function(jQuery)
-			{
-			jQuery('body').on('change','#ReportTable_'+itemCounter+'_table_id',
-			function()
-				{
-				jQuery('#ReportTable_'+itemCounter+'_table_id option[value='+jQuery(this).val()+']').attr("selected",true); 
-				jQuery.ajax(
+		jQuery('body').on('change','#ReportTable_'+itemCounter+'_table_id',
+		function()
+		{
+			jQuery('#ReportTable_'+itemCounter+'_table_id option[value='+jQuery(this).val()+']').attr("selected",true); 
+			jQuery.ajax(
+					{
+					'type': 'POST',
+					'url': 	'/index.php?r=table/listTableLayout',
+					'data':	{
+								'id':this.value,
+								'cellCounter':cellCounter,
+								'textCounter':textCounter,
+								'rowCounter':rowCounter
+							},
+					'cache':false,
+					'success':	
+						function(html)
 						{
-						'type': 'POST',
-						'url': 	'/index.php?r=table/listTableLayout',
-						'data':	{
-									'id':this.value,
-									'cellCounter':cellCounter,
-									'textCounter':textCounter,
-									'rowCounter':rowCounter
-								},
-						'cache':false,
-						'success':	
-							function(html)
+							//El esquema de la tabla seleccionada se inserta en el layoutTable específico.
+							jQuery("#layoutTable"+itemCounter).html(html);
+							
+							//Se aumenta el contador de filas.
+							rowCounter++;
+							
+							//Se obtiene el total de celdas después de la inserción de la tabla y se modifica su contador.
+							var cellTotal = (jQuery('div.content').length);
+							var insertedCells = cellTotal - cellsExist;
+							cellCounter += insertedCells;
+							
+							//Se cambia el mensaje del total de celdas y total de filas.
+							jQuery('#countCells').html('Total de celdas: '+(jQuery('div.content').length));
+							jQuery('#countRows').html('Total filas: '+(jQuery('tr.row').length));
+							
+							//También se obtiene el total de textos de tabla y se modifica su contador.
+							var textTotal = (jQuery('div.text').length);
+							var insertedTexts = textTotal - textsExist;
+							textCounter += insertedTexts; 
+							
+							//Se cambia el mensaje de total de textos.
+							jQuery('#countTexts').html('Total de textos: '+(jQuery('div.text').length));
+							
+							//Se cambia el valor de rowCount de la tabla creada.
+							var parent = jQuery('#ReportTable_'+itemCounter+'_table_id').parents().get(0);
+							var r=jQuery(parent).children(".rowCount").val(1);	
+							jQuery(parent).children("#errorTable").html("");	
+							cellsExist++;
+							
+							//Se asigna el evento autoComplete a la celda que contenga la clase autoComplete.
+							for(cellsExist; cellsExist<=cellTotal; cellsExist++)
 							{
-								//El esquema de la tabla seleccionada se inserta en el layoutTable específico.
-								jQuery("#layoutTable"+itemCounter).html(html);
-								
-								//Se aumenta el contador de filas.
-								rowCounter++;
-								
-								//Se obtiene el total de celdas después de la inserción de la tabla y se modifica su contador.
-								var cellTotal = (jQuery('div.content').length);
-								var insertedCells = cellTotal - cellsExist;
-								cellCounter += insertedCells;
-								
-								//Se cambia el mensaje del total de celdas y total de filas.
-								jQuery('#countCells').html('Total de celdas: '+(jQuery('div.content').length));
-								jQuery('#countRows').html('Total filas: '+(jQuery('tr.row').length));
-								
-								//También se obtiene el total de textos de tabla y se modifica su contador.
-								var textTotal = (jQuery('div.text').length);
-								var insertedTexts = textTotal - textsExist;
-								textCounter += insertedTexts; 
-								
-								//Se cambia el mensaje de total de textos.
-								jQuery('#countTexts').html('Total de textos: '+(jQuery('div.text').length));
-								
-								//Se cambia el valor de rowCount de la tabla creada.
-								var parent = jQuery('#ReportTable_'+itemCounter+'_table_id').parents().get(0);
-								var r=jQuery(parent).children(".rowCount").val(1);	
-								jQuery(parent).children("#errorTable").html("");	
-								cellsExist++;
-								
-								//Se asigna el evento autoComplete a la celda que contenga la clase autoComplete.
-								for(cellsExist; cellsExist<=cellTotal; cellsExist++)
+								if(/autoComplete/.test(jQuery("#ReportTableCell_"+cellsExist+"_content").attr("class")))
 								{
-									if(/autoComplete/.test(jQuery("#ReportTableCell_"+cellsExist+"_content").attr("class")))
-									{
-										console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellsExist+"_content");
-										jQuery("#ReportTableCell_"+cellsExist+"_content").on("click",AddAutoComplete);
-									}
-								}	
-							}		
-						});
-					return false;
-				});
-		
-			});
+									console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellsExist+"_content");
+									jQuery("#ReportTableCell_"+cellsExist+"_content").on("click",AddAutoComplete);
+								}
+							}	
+						}		
+					});
+		});
 	}
 	
 	/*
@@ -593,10 +588,10 @@ jQuery(document).ready(function() {
 					dataType:"json",
 					success: function(data) {
 						response(data);
-					},
+					}
 				})
 			},
-			minLength: 1, 
+			minLength: 1
 		});	
 	}
 	

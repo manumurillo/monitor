@@ -1,5 +1,5 @@
 /*** layout/positioning - stuff you probably won't need to change ***/
-._wColorPicker_holder{display:inline-block; position:static; z-index:999999; cursor:default;}
+._wColorPicker_holder{display:inline-block; position:absolute; z-index:999999; cursor:default;}
 ._wColorPicker_outer{position:relative;}
 ._wColorPicker_inner{position:relative;}
 ._wColorPicker_bg{position:absolute; left:0; top:0; width:100%; height:100%;}
@@ -27,10 +27,10 @@
 ._wColorPicker_color.activeTop{border-top-color:#FF0000;}
 
 /*** palette button ***/
-._wColorPicker_buttonHolder{display:inline-block; cursor:pointer;}
+._wColorPicker_buttonHolder{display:inline-block; cursor:pointer; width: 26px;}
 ._wColorPicker_buttonBorder{border:solid #9A9A9A 1px; border-radius:5px;}
 ._wColorPicker_buttonColor{margin:2px; border-radius:4px;}
-._wColorPicker_paletteHolder{z-index:999999;}
+._wColorPicker_paletteHolder{position:999999;}
 
 /*** colors ***/
 ._wColorPicker_red, ._wColorPicker_red ._wColorPicker_outer{border-color:#CE6F6F;}

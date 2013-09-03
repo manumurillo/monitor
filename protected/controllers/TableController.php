@@ -263,7 +263,7 @@ class TableController extends Controller
 							<input id='ReportText_".$textCounter."_rtable_id' type='hidden' value='0' name='ReportText[".$textCounter."][rtable_id]'>
 							<div style='display:none' id='ReportText_".$textCounter."_text' class='text'>".$table->description."</div>
 						</th>
-						<script>	
+						<script type='text/javascript'>	
 						tinymce.init({
 							selector: '#ReportText_".$textCounter."_text',
 							inline: true,
@@ -275,10 +275,9 @@ class TableController extends Controller
 							toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect',
 							toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
 							toolbar3: 'bullist numlist | table | hr removeformat | subscript superscript charmap | preview code',
-
 							menubar: false,
 							toolbar_items_size: 'small',
-							language: 'es',
+							language: 'es'
 						});
 						</script>
 					</tr>
@@ -302,7 +301,7 @@ class TableController extends Controller
 						<input type='hidden' id='ReportTableCell_".$cellCounter."_column_id' class='column' name='ReportTableCell[".$cellCounter."][column_id]' value='".$column->id."'>
 						<input type='hidden' id='ReportTableCell_".$cellCounter."_row_id' name='ReportTableCell[".$cellCounter."][row_id]' value='0'>
 					</th>
-					<script>	
+					<script type='text/javascript'>	
 						tinymce.init({
 							selector: '#ReportTableCell_".$cellCounter."_content',
 							inline: true,
@@ -317,10 +316,10 @@ class TableController extends Controller
 
 							menubar: false,
 							toolbar_items_size: 'small',
-							language: 'es',
+							language: 'es'
 						});";
 						if($column->autocomplete == TableColumn::AUTOCOMPLETE){
-							echo "	$('#ReportTableCell_".$cellCounter."_content').attr('class','autoComplete content');";
+							echo "	jQuery('#ReportTableCell_".$cellCounter."_content').attr('class','autoComplete content');";
 						}
 					echo "</script>";
 				}
@@ -332,20 +331,20 @@ class TableController extends Controller
 						<input type='button' value='+' id='addTableRow'>
 						<input type='button' value='-' id='delTableRow'>
 					</th>
-					<script>
-					$('#nvoColorPicker".$rowCounter."').wColorPicker({
+					<script type='text/javascript'>
+					jQuery('#nvoColorPicker".$rowCounter."').wColorPicker({
 						initColor: '#000000',
 						mode: 'click',
 						effect: 'slide', 
 						theme: 'red',
 						onSelect: function(color){
-							$('#ReportTableRow_".$rowCounter."_color').css('color', color).val(color);
+							jQuery('#ReportTableRow_".$rowCounter."_color').css('color', color).val(color);
 						},
 						onMouseover: function(color){
-							$('#ReportTableRow_".$rowCounter."_color').css('color', color).val(color);
+							jQuery('#ReportTableRow_".$rowCounter."_color').css('color', color).val(color);
 						},
 						onMouseout: function(color){
-							$('#ReportTableRow_".$rowCounter."_color').css('color', color).val(color);
+							jQuery('#ReportTableRow_".$rowCounter."_color').css('color', color).val(color);
 						}
 					});
 					</script>
@@ -357,7 +356,7 @@ class TableController extends Controller
 							<input id='ReportText_".$textCounter."_rtable_id' type='hidden' value='0' name='ReportText[".$textCounter."][rtable_id]'>
 							<div style='display:none' id='ReportText_".$textCounter."_text' class='text'>".$table->footer."</div>
 						</th>
-						<script>		
+						<script type='text/javascript'>		
 						tinymce.init({
 							selector: '#ReportText_".$textCounter."_text',
 							inline: true,
@@ -372,7 +371,7 @@ class TableController extends Controller
 
 							menubar: false,
 							toolbar_items_size: 'small',
-							language: 'es',
+							language: 'es'
 						});
 						</script>
 					</tr>

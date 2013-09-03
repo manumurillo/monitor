@@ -307,14 +307,7 @@
 					echo $form->labelEx($rTable,"[$textCounter]table_id");
 					echo  "<span id='errorTable'></span>";
 					echo $form->dropdownlist($rTable, "[$tableCounter]table_id", CHtml::listData(Table::model()->findAll(), 'id', 'name'),
-					  array('empty'=>'Seleccione una tabla', 'selected'=>'',
-						'ajax'=>array(
-							'type'=>'POST',
-							'url'=>CController::createUrl('table/listTableLayout'),
-							'update'=>'#layoutTable',
-							'data'=>array('id'=>'js:this.value'),
-						 ),
-					  )); 
+					  array('empty'=>'Seleccione una tabla', 'selected'=>'')); 
 					echo $form->hiddenField($rTable,"[$tableCounter]rowCounter",array('value'=>0, 'class'=>'rowCount')); 
 				?>
 				<br>

@@ -6441,3 +6441,30 @@ in C:\xampp\htdocs\monitor_axa\index.php (13)
 in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (520)
 in C:\xampp\htdocs\monitor_axa\protected\controllers\ReportController.php (407)
 in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 18:54:18 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 18:54:18 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 18:54:18 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 18:54:45 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (131)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 18:54:45 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (131)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 18:54:45 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (131)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 19:02:00 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (82)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 19:03:10 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (146)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
+2013/09/02 19:03:59 [warning] [application] Failed to set unsafe attribute "id" of "TableColumn".
+in C:\xampp\htdocs\monitor_axa\protected\controllers\TableController.php (146)
+in C:\xampp\htdocs\monitor_axa\index.php (13)
