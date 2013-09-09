@@ -172,14 +172,17 @@ jQuery(document).ready(function() {
 		/* Variables que obtienen el total de items de texto y celdas antes de que el usuario seleccione
 		 * la tabla que desea agregar al reporte.
 		 */
-		var cellsExist=(jQuery('div.content').length);
-		var textsExist=(jQuery('div.text').length);
 
 		//Función que agrega el evento onChange al select que muestra las tablas disponibles.
 		jQuery('body').on('change','#ReportTable_'+itemCounter+'_table_id',
 		function()
 		{
+			var cellsExist=(jQuery('div.content').length);
+			var textsExist=(jQuery('div.text').length);
 			jQuery('#ReportTable_'+itemCounter+'_table_id option[value='+jQuery(this).val()+']').attr("selected",true); 
+			jQuery('#ReportTable_'+itemCounter+'_table_id').attr("disabled","disabled"); 
+			jQuery("#layoutTable"+itemCounter).children("#load").css("display","inline"); 
+			
 			jQuery.ajax(
 					{
 					'type': 'POST',
@@ -204,7 +207,7 @@ jQuery(document).ready(function() {
 							var cellTotal = (jQuery('div.content').length);
 							var insertedCells = cellTotal - cellsExist;
 							cellCounter += insertedCells;
-							
+							console.log("Valor de cellcounter despues de imprimir la tabla"+cellCounter);
 							//Se cambia el mensaje del total de celdas y total de filas.
 							jQuery('#countCells').html('Total de celdas: '+(jQuery('div.content').length));
 							jQuery('#countRows').html('Total filas: '+(jQuery('tr.row').length));
@@ -228,7 +231,6 @@ jQuery(document).ready(function() {
 							{
 								if(/autoComplete/.test(jQuery("#ReportTableCell_"+cellsExist+"_content").attr("class")))
 								{
-									console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellsExist+"_content");
 									jQuery("#ReportTableCell_"+cellsExist+"_content").on("click",AddAutoComplete);
 								}
 							}	
@@ -269,6 +271,7 @@ jQuery(document).ready(function() {
 				console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellInit+"_content");
 				jQuery("#ReportTableCell_"+cellInit+"_content").on("click",AddAutoComplete);
 			}
+		console.log('Se agregó el editor a: #ReportTableCell_'+cellInit+'_content');
 		}
 	}
 	
@@ -310,6 +313,7 @@ jQuery(document).ready(function() {
 		var r=jQuery(sixParent).children(".rowCount").val(r);
 		
 		var cellInit=cellCounter;
+		console.log('cellInit = cellCounter = '+cellCounter);
 		
 		//Por cada elemento th con id 'cells', cambiamos el id y nombre
 		jQuery(newItem).children('#cells').each(function(){

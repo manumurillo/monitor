@@ -34,7 +34,7 @@ class ReportController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'list' and 'show' actions
-				'actions'=>array('index', 'view'),
+				'actions'=>array('index', 'view', 'HtmlReports/'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated users to perform any action
@@ -1067,6 +1067,58 @@ class ReportController extends Controller
 		));
 	}
 
+	/**
+	 * Export a particular Report to HTML
+	 */
+	public function actionExport()
+	{
+		$this->pageTitle = 'Exportar a HTML';
+		
+		if(isset($_POST["content"]) && isset($_POST["id"]))
+		{
+			$report = Report::model()->findByPk(array($_POST["id"]));
+			$titulo = $report->date_created.".html";
+			$url = Yii::app()->basePath."/../HtmlReports/$titulo";
+			//echo $url;
+			//Yii::app()->end();
+			$content = 	$_POST["content"];
+			$docMeta = "<!DOCTYPE HTML>".
+						"<HTML>".
+						"<HEAD>".
+							"<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>".
+						"</HEAD>".
+						"<BODY>".
+							"<div style='width: 900px; text-align: center; margin-left:auto; margin-right:auto;'>".
+								"<span style='font-family:arial; color:#000000; font-size:12px;'>Si no puede ver este mensaje correctamente por favor, haga clic <a href='http://axa-monitor.loc/HtmlReports/$titulo'>aquí</a>.</span>".
+							"<div style='width: 900px; text-align: center; '>".$content.
+							"</div></div>".
+						"</BODY>".
+						"<HTML>";
+						
+			$html = fopen ( $url, 'w+' );//abro o genero archivo *ruta relativa
+			fwrite ($html, $docMeta);//escribo el contenido
+			fclose($html);//cierro el archivo
+			
+			echo "Se ha creado el archivo correctamente, lo puede descargar <a href='HtmlReports/download.php?file=$titulo' target='_blank'>aquí</a>.<br>";
+			
+		}
+		
+		if(isset($_GET['id']))
+		{
+			$this->loadReport($_GET['id']);
+			$this->render('export',array(
+					'report'=>$this->report, 
+					'items'=>$this->items, 
+					'texts'=>$this->texts, 
+					'rTables'=>$this->rTables, 
+					'rows'=>$this->rows, 
+					'cells'=>$this->cells,
+				)
+			);
+		}
+	}
+	
+	
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

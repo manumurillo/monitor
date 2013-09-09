@@ -321,7 +321,7 @@ class TableController extends Controller
 						if($column->autocomplete == TableColumn::AUTOCOMPLETE){
 							echo "	jQuery('#ReportTableCell_".$cellCounter."_content').attr('class','autoComplete content');";
 						}
-					echo "</script>";
+					echo "console.log('Se agregó el editor a: #ReportTableCell_".$cellCounter."_content');</script>";
 				}
 				$textCounter++;
 				echo "<th width='200px' id='cellControls' align='left' valign='center'>

@@ -46,3 +46,137 @@
 	background: #ffffff url(../images/show.png) no-repeat;
 	color: #ffffff;
 }
+
+.defaultTheme{
+	width: 85px;
+	height: 91px;
+	background: #ffffff url(../images/defaultTheme.png) no-repeat;
+	color: #000000;
+	border: 0px;
+}
+
+.lightTheme{
+	width: 85px;
+	height: 91px;
+	background: #ffffff url(../images/lightTheme.png) no-repeat;
+	color: #000000;
+	border: 0px;
+}
+
+.darkTheme{
+	width: 85px;
+	height: 91px;
+	background: #ffffff url(../images/darkTheme.png) no-repeat;
+	color: #000000;
+	border: 0px;
+}
+
+.blackTheme{
+	width: 85px;
+	height: 91px;
+	background: #ffffff url(../images/blackTheme.png) no-repeat;
+	color: #000000;
+	border: 0px;
+}
+
+.grayScaleTheme{
+	width: 85px;
+	height: 91px;
+	background: #ffffff url(../images/grayScaleTheme.png) no-repeat;
+	color: #000000;
+	border: 0px;
+}
+
+.whiteTheme{
+	width: 85px;
+	height: 91px;
+	background: #ffffff url(../images/whiteTheme.png) no-repeat;
+	color: #000000;
+	border: 0px;
+}
+
+.exportToHtml{
+	width: 105px;
+	height: 22px;
+	background: #ffffff url(../images/exportToHtml.png) no-repeat;
+	color: #000000;
+	border: solid 1px #400000;
+}
+
+#themeConfig{
+	background-color: #BFBFFF;
+	width: 880px;
+	height: 100px;
+	padding: 10px 10px 10px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#themeGallery{
+	margin-top: 2px;
+	height: 100px;
+	width: 500px;
+	float: left;
+	overflow: hidden;
+	background-color: #ffffff;
+}
+#themeMove{
+	margin-top: 5px;
+	height: 95px;
+	width: 700px;
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#prev{	
+	margin-top: 5px;
+	height: 95px;
+	width: 17px;
+	float: left;
+	background-image: url("../images/prev.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#next{
+	margin-top: 5px;
+	height: 95px;
+	width: 17px;
+	float: left;
+	background-image: url("../images/next.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.theme{
+	float: left;
+	height: 91px;
+	width: 85px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+#result{
+	background-color: #FFDFBF;
+	text-align: center;
+	padding: 5px;
+}
+#options{
+	float:left;
+	margin-top: 2px;
+	margin-left: 15px;
+	padding: 5px;
+	height: 95px;
+	width: 320px;
+	background-color: #FFDFBF;
+	text-align: center;
+}
+
+.mce-content-body{
+	border: solid 1px #aaaaaa;
+}
+
+.autoComplete{
+	border: solid 1px #aaaaaa;
+}

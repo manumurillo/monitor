@@ -310,7 +310,9 @@
 					echo $form->hiddenField($rTable,"[$tableCounter]rowCounter",array('value'=>0, 'class'=>'rowCount')); 
 				?>
 				<br>
-				<div id="layoutTable"><i>Una vez seleccionada la tabla, la estructura será mostrada aquí.</i></div>
+				<div id="layoutTable">
+						<img id="load" src='/images/ajax-loader.gif' style="display:none"/><i>Una vez seleccionada la tabla, la estructura será mostrada aquí.</i>
+					</div>
 				<hr>
 				<input type="button" class="addTextButton" id="btnAgregarTexto"> 
 				<input type="button" class="addTableButton" id="btnAgregarTabla">
