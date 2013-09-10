@@ -30,7 +30,7 @@ jQuery(document).ready(function() {
 		{
 			jQuery('#themeMove').animate({
 				marginLeft: "+=150"
-			}, "slow");
+			}, "fast");
 		}
 	});
 	
@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
 		else{
 			jQuery('#themeMove').animate({
 				marginLeft: "-=150"
-			}, "slow");
+			}, "fast");
 		}
 	});
 	
@@ -73,7 +73,7 @@ jQuery(document).ready(function() {
 	function applyLightTheme(){
 		jQuery('#table-background').css("background-color","#7396FF");
 		jQuery('#table-background').css("border","0px");
-		jQuery('.division-report').css("background-color","#4C79FF");
+		jQuery('.division-report').css("background-color","#7396FF");
 		jQuery('#reportContent').css("border","0px");
 		
 		jQuery('#reportTitle').css("color","#ffffff");
@@ -180,6 +180,7 @@ jQuery(document).ready(function() {
 	function exportToHtml(){
 		var content = jQuery('#Report').html();
 		var id = jQuery('#Report_id').val();
+		var theme = jQuery('#Report_theme').val();
 		jQuery('#load').css("display","inline");
 		jQuery.ajax(
 		{
@@ -187,7 +188,8 @@ jQuery(document).ready(function() {
 		'url': 	'/index.php?r=report/export',
 		'data':	{
 					'content':content,
-					'id':id
+					'id':id,
+					'theme':theme
 				},
 		'cache':false,
 		'success':	
@@ -209,4 +211,5 @@ jQuery(document).ready(function() {
 		var parent = jQuery("#"+themeName).parents().get(0);
 		jQuery(parent).css("border","solid 2px #B32D00");
 		jQuery(parent).css("opacity",".5");
+		jQuery('#Report_theme').val(themeName);
 	}

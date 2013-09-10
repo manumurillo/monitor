@@ -30,13 +30,12 @@
 			'items'=>array(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
 				array('label'=>'Reportes', 'url'=>array('/report/index')),
-				//array('label'=>'Items', 'url'=>array('/reportItem/index')),
-				//array('label'=>'Textos', 'url'=>array('/reportText/index')),
 				array('label'=>'Tablas', 'url'=>array('/table/index')),
-				//array('label'=>'Tablas de Reporte', 'url'=>array('/reportTable/index')),
 				array('label'=>'Usuarios', 'url'=>array('/user/index')),
+				array('label'=>'A cerca de', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Iniciar sesión', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Cerrar sesión ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				
 			),
 		)); ?>
 	</div><!-- mainmenu -->

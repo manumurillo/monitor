@@ -177,12 +177,10 @@ jQuery(document).ready(function() {
 		jQuery('body').on('change','#ReportTable_'+itemCounter+'_table_id',
 		function()
 		{
-			var cellsExist=(jQuery('div.content').length);
-			var textsExist=(jQuery('div.text').length);
 			jQuery('#ReportTable_'+itemCounter+'_table_id option[value='+jQuery(this).val()+']').attr("selected",true); 
-			jQuery('#ReportTable_'+itemCounter+'_table_id').attr("disabled","disabled"); 
+			//jQuery('#ReportTable_'+itemCounter+'_table_id').attr("disabled","disabled"); 
 			jQuery("#layoutTable"+itemCounter).children("#load").css("display","inline"); 
-			
+			console.log("Valores antes de enviar la consulta: \nCellCounter: "+cellCounter+" Textcounter: "+textCounter+" rowCounter: "+rowCounter)
 			jQuery.ajax(
 					{
 					'type': 'POST',
@@ -193,28 +191,25 @@ jQuery(document).ready(function() {
 								'textCounter':textCounter,
 								'rowCounter':rowCounter
 							},
+					'dataType': 'json',
 					'cache':false,
 					'success':	
 						function(html)
 						{
 							//El esquema de la tabla seleccionada se inserta en el layoutTable específico.
-							jQuery("#layoutTable"+itemCounter).html(html);
+							jQuery("#layoutTable"+itemCounter).html(html['layout']);
 							
 							//Se aumenta el contador de filas.
 							rowCounter++;
+							var numInsertedCells = html['cellCounter'];
+							cellCounter += numInsertedCells;
 							
-							//Se obtiene el total de celdas después de la inserción de la tabla y se modifica su contador.
-							var cellTotal = (jQuery('div.content').length);
-							var insertedCells = cellTotal - cellsExist;
-							cellCounter += insertedCells;
-							console.log("Valor de cellcounter despues de imprimir la tabla"+cellCounter);
 							//Se cambia el mensaje del total de celdas y total de filas.
 							jQuery('#countCells').html('Total de celdas: '+(jQuery('div.content').length));
 							jQuery('#countRows').html('Total filas: '+(jQuery('tr.row').length));
 							
 							//También se obtiene el total de textos de tabla y se modifica su contador.
-							var textTotal = (jQuery('div.text').length);
-							var insertedTexts = textTotal - textsExist;
+							var insertedTexts = html['textCounter'];
 							textCounter += insertedTexts; 
 							
 							//Se cambia el mensaje de total de textos.
@@ -223,15 +218,16 @@ jQuery(document).ready(function() {
 							//Se cambia el valor de rowCount de la tabla creada.
 							var parent = jQuery('#ReportTable_'+itemCounter+'_table_id').parents().get(0);
 							var r=jQuery(parent).children(".rowCount").val(1);	
-							jQuery(parent).children("#errorTable").html("");	
-							cellsExist++;
+							jQuery(parent).children("#errorTable").html("");
 							
+							var rangeInit = cellCounter-numInsertedCells;
+							var rangeEnd = cellCounter;
 							//Se asigna el evento autoComplete a la celda que contenga la clase autoComplete.
-							for(cellsExist; cellsExist<=cellTotal; cellsExist++)
+							for(rangeInit; rangeInit<=rangeEnd; rangeInit++)
 							{
-								if(/autoComplete/.test(jQuery("#ReportTableCell_"+cellsExist+"_content").attr("class")))
+								if(/autoComplete/.test(jQuery("#ReportTableCell_"+rangeInit+"_content").attr("class")))
 								{
-									jQuery("#ReportTableCell_"+cellsExist+"_content").on("click",AddAutoComplete);
+									jQuery("#ReportTableCell_"+rangeInit+"_content").on("click",AddAutoComplete);
 								}
 							}	
 						}		
@@ -268,10 +264,8 @@ jQuery(document).ready(function() {
 			//Asignación del evento autocomplete si la celda lo requiere.
 			if(/autoComplete/.test(jQuery("#ReportTableCell_"+cellInit+"_content").attr("class")))
 			{
-				console.log("Asignado el evento autocomplete a: ReportTableCell_"+cellInit+"_content");
 				jQuery("#ReportTableCell_"+cellInit+"_content").on("click",AddAutoComplete);
 			}
-		console.log('Se agregó el editor a: #ReportTableCell_'+cellInit+'_content');
 		}
 	}
 	
@@ -296,8 +290,6 @@ jQuery(document).ready(function() {
 	 * el evento que permite insertar una fila en un item tipo Tabla
 	 */
 	function addTableRow(){
-		console.log('Iniciando clonacion');
-
 		//Se identifica al padre que contiene al elemento addTableRow (en este caso, <tr>
 		var parent = jQuery(this).parents().get(1);
 		
@@ -313,13 +305,11 @@ jQuery(document).ready(function() {
 		var r=jQuery(sixParent).children(".rowCount").val(r);
 		
 		var cellInit=cellCounter;
-		console.log('cellInit = cellCounter = '+cellCounter);
-		
+	
 		//Por cada elemento th con id 'cells', cambiamos el id y nombre
 		jQuery(newItem).children('#cells').each(function(){
 			//Se aumenta el valor de cellCounter.
 			cellCounter++;
-			//console.log("CellCounter: "+cellCounter+"\n"); 
 			//Se asignan los nuevos atributos de cada campo
 			var oldDiv = jQuery(this).children("div").eq(0);
 			if(/autoComplete/.test(jQuery(oldDiv).attr("class")))
@@ -358,9 +348,9 @@ jQuery(document).ready(function() {
 		//El item clonado se inserta después de la fila que invocó el evento.
 		jQuery(parent).after(jQuery(newItem));
 		
-		//Se agrega el editor tinymce a casa celda clonada
+		//Se agrega el editor tinymce a cada celda clonada
 		var cellFin = cellCounter;
-		addTextEditor(cellInit+1, cellFin+1);
+		addTextEditor(cellInit+1, cellFin);
 								
 		//Se actualizan los mensajes de filas y celdas.
 		jQuery('#countRows').html('Total de filas: '+(jQuery('tr.row').length));

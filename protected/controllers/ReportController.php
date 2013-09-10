@@ -122,6 +122,7 @@ class ReportController extends Controller
 	public function actionPreview()
 	{
 		$this->pageTitle = 'Vista previa';
+		$this->layout='preview';	
 		$_report;
 		$_postItem = array();
 		$_postText = array();
@@ -1074,10 +1075,14 @@ class ReportController extends Controller
 	{
 		$this->pageTitle = 'Exportar a HTML';
 		
-		if(isset($_POST["content"]) && isset($_POST["id"]))
+		if(isset($_POST["content"]) && isset($_POST["id"]) && isset($_POST["theme"]))
 		{
 			$report = Report::model()->findByPk(array($_POST["id"]));
-			$titulo = $report->date_created.".html";
+			$theme = $_POST["theme"];
+			if($theme == 'defaultTheme')
+				$titulo = $report->date_created.".html";
+			else
+				$titulo = $report->date_created."_".$theme.".html";
 			$url = Yii::app()->basePath."/../HtmlReports/$titulo";
 			//echo $url;
 			//Yii::app()->end();

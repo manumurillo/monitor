@@ -59,7 +59,8 @@
 	<div id="options">
 		<input type="button" id="exportToHtml" value="" class="exportToHtml"/><img id="load" src='/images/ajax-loader.gif' style="display:none"/>	
 		<input type="hidden" value="<?php echo CHtml::encode($report->id); ?>" id="Report_id">
-		<div id="result"><p>Seleccione un tema para aplicarlo al Reporte  <i><?php echo CHtml::encode($report->title); ?></i></div>
+		<input type="hidden" value="default" id="Report_theme">
+		<div id="result"><p>Seleccione un tema para aplicarlo al reporte:<br> <b><i><?php echo CHtml::encode($report->title); ?></i></b></div>
 	</div>
 </div>
 <div id="Report">

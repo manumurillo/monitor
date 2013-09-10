@@ -35,7 +35,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',User::getStatusArray());?>
+		<?php echo $form->dropDownList($model,'status',Lookup::items('UserStatus'));?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 

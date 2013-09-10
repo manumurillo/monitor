@@ -66,6 +66,8 @@ INSERT INTO `monitor_lookup` (`id`, `name`, `code`, `type`, `position`) VALUES
 (7, 'Habilitado', 1, 'ReportTableStatus', 1),
 (8, 'No autocompletar', 0, 'ReportTableColumnAutocomplete', 0),
 (9, 'Autocompletar', 1, 'ReportTableColumnAutocomplete', 1);
+(10, 'Activo', 1, 'UserStatus', 1);
+(11, 'Inactivo', 2, 'UserStatus', 2);
 
 -- --------------------------------------------------------
 

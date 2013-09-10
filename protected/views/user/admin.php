@@ -42,9 +42,12 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id',
 		'username',
-		'password',
 		'email',
-		'status',
+		array(
+            'name'=>'status',
+            'value'=>'Lookup::item("UserStatus",$data->status)',
+            'filter'=>Lookup::items('UserStatus'),
+        ),
 		array(
 			'class'=>'CButtonColumn',
 		),

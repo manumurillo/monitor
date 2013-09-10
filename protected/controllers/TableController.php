@@ -245,17 +245,19 @@ class TableController extends Controller
 			$cellCounter=$_POST['cellCounter']; //Contador de los campos de celdas.
 			$textCounter=$_POST['textCounter'];
 			$rowCounter=$_POST['rowCounter'];
-			$rowCounter++;
-			$textCounter++;
+			$insertedCells = 0;
+			$insertedTexts = 0;
 			$table=Table::model()->findByPk($id);
+			$layout="";
 			if ($table===null)
 			{
-				echo "La tabla no existe";
+				$layout="La tabla no existe";
 			}
 			else
 			{
 				$columns = $table->columns;
-				echo "<table border='1'>
+				$textCounter++;
+				$layout.="<table border='1'>
 					<tr>
 						<th colspan='".CHtml::encode($table->columnsCount+1)."' align='left' valign='center'>
 							<span><input class='showHide' id='showHide".$textCounter."' type='button' value='' onClick='showHide(\"ReportText_".$textCounter."_text\", \"showHide".$textCounter."\")'/></span>Descripción:<br><br>
@@ -270,7 +272,7 @@ class TableController extends Controller
 							plugins: [
 								'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 								'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-								'table contextmenu directionality emoticons template textcolor paste textcolor'
+								'table directionality emoticons template textcolor paste textcolor'
 							],
 							toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect',
 							toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
@@ -282,13 +284,14 @@ class TableController extends Controller
 						</script>
 					</tr>
 					<tr>";
+					$insertedTexts++;
 				foreach($columns as $column)
 				{
-					echo "<th width='".CHtml::encode($column->width)."' align='center' valign='middle'>
+					$layout.="<th width='".CHtml::encode($column->width)."' align='center' valign='middle'>
 							<font color='".CHtml::encode($column->color)."'><b>".CHtml::encode($column->title)."</b></font>
 						</th>";
 				}
-				echo "<th>
+				$layout.="<th>
 						c/+/- filas	
 					</th>
 					</tr>
@@ -296,7 +299,8 @@ class TableController extends Controller
 				foreach($columns as $column)
 				{
 					$cellCounter++;
-				echo "<th id='cells' align='left' valign='middle'>
+					$insertedCells++;
+				$layout.="<th id='cells' align='left' valign='middle'>
 						<div style='width:100%; height:100%' id='ReportTableCell_".$cellCounter."_content' class='content'></div>
 						<input type='hidden' id='ReportTableCell_".$cellCounter."_column_id' class='column' name='ReportTableCell[".$cellCounter."][column_id]' value='".$column->id."'>
 						<input type='hidden' id='ReportTableCell_".$cellCounter."_row_id' name='ReportTableCell[".$cellCounter."][row_id]' value='0'>
@@ -308,7 +312,7 @@ class TableController extends Controller
 							plugins: [
 								'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 								'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-								'table contextmenu directionality emoticons template textcolor paste textcolor'
+								'table directionality emoticons template textcolor paste textcolor'
 							],
 							toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect',
 							toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
@@ -319,12 +323,12 @@ class TableController extends Controller
 							language: 'es'
 						});";
 						if($column->autocomplete == TableColumn::AUTOCOMPLETE){
-							echo "	jQuery('#ReportTableCell_".$cellCounter."_content').attr('class','autoComplete content');";
+							$layout.="	jQuery('#ReportTableCell_".$cellCounter."_content').attr('class','autoComplete content');";
 						}
-					echo "console.log('Se agregó el editor a: #ReportTableCell_".$cellCounter."_content');</script>";
+					$layout.="console.log('Se agregó el editor a: #ReportTableCell_".$cellCounter."_content');</script>";
 				}
 				$textCounter++;
-				echo "<th width='200px' id='cellControls' align='left' valign='center'>
+				$layout.="<th width='200px' id='cellControls' align='left' valign='center'>
 						<div id='nvoColorPicker".$rowCounter."'></div>
 						<input type='text' id='ReportTableRow_".$rowCounter."_color' name='ReportTableRow[".$rowCounter."][color]' size='8' maxlength='7'><br>
 						<input type='hidden' id='ReportTableRow_".$rowCounter."_id' name='ReportTableRow[".$rowCounter."][id]' value='0'>
@@ -363,7 +367,7 @@ class TableController extends Controller
 							plugins: [
 								'advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker',
 								'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-								'table contextmenu directionality emoticons template textcolor paste textcolor'
+								'table directionality emoticons template textcolor paste textcolor'
 							],
 							toolbar1: 'undo redo | styleselect formatselect fontselect fontsizeselect',
 							toolbar2: 'forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | link unlink',
@@ -375,8 +379,15 @@ class TableController extends Controller
 						});
 						</script>
 					</tr>
-					</table>";	
+					</table>";
+				$insertedTexts++;
 			}
+			$array = [
+				"layout" => $layout,
+				"cellCounter" => $insertedCells,
+				"textCounter" => $insertedTexts,
+			];
+			echo json_encode($array);
 		}
 		Yii::app()->end();
 	}
