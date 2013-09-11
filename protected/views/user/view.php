@@ -25,6 +25,9 @@ $this->menu=array(
 		'username',
 		'password',
 		'email',
-		'status',
+		array(
+            'name'=>'status',
+            'value'=>Lookup::item("UserStatus",$model->status)
+        ),
 	),
 )); ?>

@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Crear nuevo reporte', 'url'=>array('create')),
-	array('label'=>'Administrar reportes', 'url'=>array('admin')),
+	array('label'=>'Crear nuevo reporte', 'url'=>array('create'), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Administrar reportes', 'url'=>array('admin'), 'visible'=>!Yii::app()->user->isGuest),
 );
 ?>
 

@@ -6,12 +6,12 @@ $this->breadcrumbs=array(
 	$report->title,
 );
 $this->menu=array(
-	array('label'=>'Administrar Reportes', 'url'=>array('admin')),
-	array('label'=>'Ver todos los reportes', 'url'=>array('index')),
-	array('label'=>'Crear un nuevo reporte', 'url'=>array('create')),
-	array('label'=>'Modificar reporte', 'url'=>array('update', 'id'=>$report->id)),
-	array('label'=>'Exportar a HTML', 'url'=>array('export', 'id'=>$report->id)),
-	array('label'=>'Eliminar reporte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$report->id),'confirm'=>'¿Está seguro de eliminar este Reporte?')),
+	array('label'=>'Administrar Reportes', 'url'=>array('admin'), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Ver todos los reportes', 'url'=>array('index'), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Crear un nuevo reporte', 'url'=>array('create'), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Modificar reporte', 'url'=>array('update', 'id'=>$report->id), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Exportar a HTML', 'url'=>array('export', 'id'=>$report->id), 'visible'=>!Yii::app()->user->isGuest),
+	array('label'=>'Eliminar reporte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$report->id),'confirm'=>'¿Está seguro de eliminar este Reporte?'), 'visible'=>!Yii::app()->user->isGuest),
 	
 );
 $itemCounter = $textCounter = $tableCounter = $cellCounter = $rowCounter = $colorCounter = 0;

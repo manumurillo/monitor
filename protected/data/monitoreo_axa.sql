@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-08-2013 a las 00:22:34
+-- Tiempo de generación: 11-09-2013 a las 16:30:37
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `monitor_lookup` (
   `type` varchar(128) NOT NULL,
   `position` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `monitor_lookup`
@@ -62,11 +62,11 @@ INSERT INTO `monitor_lookup` (`id`, `name`, `code`, `type`, `position`) VALUES
 (3, 'Archivado', 3, 'ReportStatus', 3),
 (4, 'Tabla', 0, 'ReportItemType', 0),
 (5, 'Texto', 1, 'ReportItemType', 1),
-(6, 'Deshabilitado', 0, 'ReportTableStatus', 0),
-(7, 'Habilitado', 1, 'ReportTableStatus', 1),
+(6, 'Deshabilitada', 0, 'ReportTableStatus', 0),
+(7, 'Habilitada', 1, 'ReportTableStatus', 1),
 (8, 'No autocompletar', 0, 'ReportTableColumnAutocomplete', 0),
-(9, 'Autocompletar', 1, 'ReportTableColumnAutocomplete', 1);
-(10, 'Activo', 1, 'UserStatus', 1);
+(9, 'Autocompletar', 1, 'ReportTableColumnAutocomplete', 1),
+(10, 'Activo', 1, 'UserStatus', 1),
 (11, 'Inactivo', 2, 'UserStatus', 2);
 
 -- --------------------------------------------------------
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `monitor_report` (
   `date_created` int(11) NOT NULL,
   `date_update` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `monitor_report_item` (
   `type` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_item_report` (`report_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `monitor_report_table` (
   PRIMARY KEY (`id`),
   KEY `FK_item_rtable` (`item_id`),
   KEY `FK_table_rtable` (`table_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `monitor_report_table_row` (
   `color` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `rtable_id` (`rtable_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `monitor_report_text` (
   PRIMARY KEY (`id`),
   KEY `FK_item_text` (`item_id`),
   KEY `rtable_id` (`rtable_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -175,14 +175,17 @@ CREATE TABLE IF NOT EXISTS `monitor_table` (
   `title` varchar(128) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `monitor_table`
 --
 
 INSERT INTO `monitor_table` (`id`, `name`, `description`, `footer`, `title`, `status`) VALUES
-(1, 'Menciones directas', '', '<p><span style="font-family: arial; color: #333333; font-size: 12px;"><strong>ALCANCE</strong></span><br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>TW:</strong></span>Suma del n&uacute;mero de seguidores.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>FB:</strong></span> Suma del n&uacute;mero de fans.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>Blog y News:</strong></span> N&uacute;mero backlinks que es la cantidad de p&aacute;ginas que la enlazan a trav&eacute;s de un v&iacute;nculo. Los backlinks son muy importantes para el posicionamiento en los buscadores y es indicativo de la relevancia o importancia de una web o blog.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>Videos:</strong></span> N&uacute;mero de reproducciones.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>Foros:</strong></span> N&uacute;mero de comentarios o respuestas a la publicaci&oacute;n.</p>', '', 1);
+(1, 'Menciones directas', '', '<p><span style="font-family: arial; color: #333333; font-size: 12px;"><strong>ALCANCE</strong></span><br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>TW:</strong></span>Suma del n&uacute;mero de seguidores.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>FB:</strong></span> Suma del n&uacute;mero de fans.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>Blog y News:</strong></span> N&uacute;mero backlinks que es la cantidad de p&aacute;ginas que la enlazan a trav&eacute;s de un v&iacute;nculo. Los backlinks son muy importantes para el posicionamiento en los buscadores y es indicativo de la relevancia o importancia de una web o blog.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>Videos:</strong></span> N&uacute;mero de reproducciones.<br /> <span style="font-family: arial; color: #2d80a4; font-size: 12px;"><strong>Foros:</strong></span> N&uacute;mero de comentarios o respuestas a la publicaci&oacute;n.</p>', 'Menciones directas', 1),
+(2, 'Menciones (usuarios)', '', '', 'Menciones', 1),
+(3, 'Competencia', '', '', 'Competencia', 1),
+(4, 'Menciones (competencia)', '', '', 'Menciones', 1);
 
 -- --------------------------------------------------------
 
@@ -200,7 +203,7 @@ CREATE TABLE IF NOT EXISTS `monitor_table_column` (
   `autocomplete` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `FK_table_column` (`table_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Volcado de datos para la tabla `monitor_table_column`
@@ -213,7 +216,21 @@ INSERT INTO `monitor_table_column` (`id`, `table_id`, `title`, `width`, `color`,
 (4, 1, 'NEUTRAL', 100, '#666666', 4, 0),
 (5, 1, 'ALCANCE', 100, '#666666', 5, 0),
 (6, 1, 'NEGATIVO', 100, '#990000', 6, 0),
-(7, 1, 'ALCANCE', 100, '#990000', 7, 0);
+(7, 1, 'ALCANCE', 100, '#990000', 7, 0),
+(8, 2, 'SITIO', 100, '#333333', 1, 1),
+(9, 2, 'USUARIO', 100, '#333333', 2, 0),
+(10, 2, 'ALCANCE', 100, '#333333', 3, 0),
+(11, 2, 'CONTENIDO', 250, '#333333', 4, 0),
+(12, 2, 'URL', 200, '#333333', 5, 0),
+(13, 3, 'MARCA', 400, '#333333', 1, 1),
+(14, 3, 'POSITIVO', 100, '#333333', 2, 0),
+(15, 3, 'NEUTRAL', 100, '#333333', 3, 0),
+(16, 3, 'NEGATIVO', 100, '#333333', 4, 0),
+(17, 4, 'MARCA', 80, '#000000', 1, 1),
+(18, 4, 'USUARIO', 80, '#000000', 2, 0),
+(19, 4, 'ALCANCE', 80, '#000000', 3, 0),
+(20, 4, 'CONTENIDO', 200, '#000000', 4, 0),
+(21, 4, 'URL', 180, '#000000', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -229,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `monitor_user` (
   `status` tinyint(1) DEFAULT NULL,
   `salt` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Volcado de datos para la tabla `monitor_user`

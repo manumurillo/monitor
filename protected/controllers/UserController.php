@@ -32,12 +32,8 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin','delete'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -63,9 +59,8 @@ class UserController extends Controller
 	public function actionCreate()
 	{
 		$model=new User;
-		$model->scenario='create';
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['User']))
 		{
@@ -87,17 +82,17 @@ class UserController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-		$model->scenario='update';
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['User']))
 		{
-			$model->setOldPassword($model->password);
 			$model->attributes=$_POST['User'];
-			if($model->save())
+			if($model->validate())
+			{
+				$model->save();
 				$this->redirect(array('view','id'=>$model->id));
+			}		
 		}
 		$model->password = "";
 		$this->render('update',array(
@@ -156,7 +151,7 @@ class UserController extends Controller
 	{
 		$model=User::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,'No existe la página.');
 		return $model;
 	}
 

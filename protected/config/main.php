@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Axa - Monitoreo de redes sociales',
+	'name'=>'Axa - Monitor',
 	'language' => 'es',
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -34,7 +34,7 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -43,7 +43,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
+		//Estilizar urls
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=monitoreo_axa',
 			'emulatePrepare' => true,

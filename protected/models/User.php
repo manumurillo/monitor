@@ -17,7 +17,6 @@ class User extends CActiveRecord
 	
 	private $_oldPassword="";
 	
-	private static $_status=array();
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -45,11 +44,10 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username', 'required'),
 			array('status', 'numerical', 'integerOnly'=>true),
 			array('username, password, email, salt', 'length', 'max'=>128),
 			array('username', 'validateUsername'),
-			array('password', 'required', 'on'=>'create'),
+			array('username, password', 'required'),
 			array('email', 'email'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -59,8 +57,8 @@ class User extends CActiveRecord
 	
 	public function validateUsername($attribute,$params)
 	{
-		if (!preg_match('/^[a-zA-Z0-9_]{1,}$/', $this->$attribute))
-			$this->addError($attribute,$this->getAttributeLabel($attribute).' solo puede contener letras números y guión bajo (_)');
+		if (!preg_match('/^[a-zA-Z0-9_]{5,}$/', $this->$attribute))
+			$this->addError($attribute,$this->getAttributeLabel($attribute).' debe ser mayor a 5 caracteres (sólo puede contener letras, números y guión bajo)');
 		
 	}
 	
@@ -161,25 +159,6 @@ class User extends CActiveRecord
 		parent::afterSave();
 		$this->password = "";
 	}
-	
-	public static function getStatusById($statusId)
-	{
-		self::loadStatus();
-		return self::$_status[$statusId];
-	}
-	
-	public static function getStatusArray()
-	{
-		self::loadStatus();
-		return self::$_status;
-	}
-	
-	private static function loadStatus()
-	{
-		if(empty(self::$_status))
-		{
-			self::$_status[User::STATUS_ACTIVE]='Active';
-			self::$_status[User::STATUS_DISABLED]='Disabled';
-		}
-	}
+
+
 }
