@@ -1080,9 +1080,9 @@ class ReportController extends Controller
 			$report = Report::model()->findByPk(array($_POST["id"]));
 			$theme = $_POST["theme"];
 			if($theme == 'defaultTheme')
-				$titulo = $report->date_created.".html";
+				$titulo = date("Ymd",$report->date_created)."_".$report->generarCodigo(2).".html";
 			else
-				$titulo = $report->date_created."_".$theme.".html";
+				$titulo = date("Ymd",$report->date_created)."_".$theme."_".$report->generarCodigo(2).".html";
 			$url = Yii::app()->basePath."/../HtmlReports/$titulo";
 			//echo $url;
 			//Yii::app()->end();
@@ -1094,7 +1094,7 @@ class ReportController extends Controller
 						"</HEAD>".
 						"<BODY>".
 							"<div style='width: 900px; text-align: center; margin-left:auto; margin-right:auto;'>".
-								"<span style='font-family:arial; color:#000000; font-size:12px;'>Si no puede ver este mensaje correctamente por favor, haga clic <a href='http://axa-monitor.loc/HtmlReports/$titulo'>aquí</a>.</span>".
+								"<span style='font-family:arial; color:#000000; font-size:12px;'>Si no puede ver este mensaje correctamente por favor, haga clic <a href='http://www.monitor.tuars.com/HtmlReports/$titulo'>aquí</a>.</span>".
 							"<div style='width: 900px; text-align: center; '>".$content.
 							"</div></div>".
 						"</BODY>".
@@ -1103,9 +1103,17 @@ class ReportController extends Controller
 			$html = fopen ( $url, 'w+' );//abro o genero archivo *ruta relativa
 			fwrite ($html, $docMeta);//escribo el contenido
 			fclose($html);//cierro el archivo
+			$ReportExport = new ReportExport();
 			
-			echo "Se ha creado el archivo correctamente, lo puede descargar <a href='HtmlReports/download.php?file=$titulo' target='_blank'>aquí</a>.<br>";
-			
+			$ReportExport->name = $titulo;
+			$ReportExport->url = "http://www.monitor.tuars.com/HtmlReports/$titulo";
+			$ReportExport->date_export = time();
+			if($ReportExport->save())
+			{
+				echo "Se ha creado el archivo correctamente, lo puede descargar <a href='/HtmlReports/download.php?file=$titulo' target='_blank'>aquí</a>.<br>";
+			}
+			else
+				echo "Hay problemas en la exportación, inténtelo de nuevo.";			
 		}
 		
 		if(isset($_GET['id']))

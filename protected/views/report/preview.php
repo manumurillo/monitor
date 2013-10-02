@@ -53,7 +53,7 @@ function toLinkAgain($n)
 						<!--cabecera-->
 						<tr id="header" style="width: 800px; background-color: #FFFFFF;">
 							<td style="text-align: center">
-								<img src="images/reportImages/header.jpg" alt="Monitoreo AXA - Havas Worldwide MX" style="width: 800px;"/>
+								<img src="../../images/reportImages/header.jpg" alt="Monitoreo AXA - Havas Worldwide MX" style="width: 800px;"/>
 							</td>
 						</tr>
 						
@@ -323,12 +323,12 @@ function toLinkAgain($n)
 											<span style="font-family:arial; color:#333333; font-size:11px;">Elaborado por HAVAS WORLDWIDE M&Eacute;XICO &copy; 2013 <br /> Leibnitz 117 piso 2<br />Colonia Anzures<br />11590, M&eacute;xico, D.F.<br /><a href="http://www.havasworldwide.com.mx" style="font-family:arial; color:#2d80a4; font-size:8px;">www.havasworldwide.com.mx</a></span>
 										</td>
 										<td style="text-align: right">
-											<img src="images/reportImages/ladoDerecho.jpg" alt="footer"/>
+											<img src="../../images/reportImages/ladoDerecho.jpg" alt="footer"/>
 										</td>
 									</tr>
 									<tr id="copyRight">
 										<td colspan="2" style="text-align: center; width: 800px; vertical-align:bottom;">
-											<img src="images/reportImages/copyRight.jpg" alt="copyRight"/>
+											<img src="../../images/reportImages/copyRight.jpg" alt="copyRight"/>
 										</td>
 									</tr>
 								</table>

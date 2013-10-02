@@ -29,7 +29,20 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$criteria=new CDbCriteria(array(
+			'order'=>'date_export DESC',
+		));
+		
+		$dataProvider=new CActiveDataProvider('ReportExport', array(
+			'pagination'=>array(
+				'pageSize'=>5,
+			),
+			'criteria'=>$criteria,
+		));
+	 
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
 	}
 
 	/**

@@ -184,7 +184,7 @@ jQuery(document).ready(function() {
 			jQuery.ajax(
 					{
 					'type': 'POST',
-					'url': 	'/index.php?r=table/listTableLayout',
+					'url': 	'/index.php/table/listTableLayout',
 					'data':	{
 								'id':this.value,
 								'cellCounter':cellCounter,
@@ -477,13 +477,13 @@ jQuery(document).ready(function() {
 	//Si es nuevo reporte.
 	jQuery("#saveReport, #saveReport1").on("click", function(event){
 		jQuery('#Report_status').attr("value","1");
-		jQuery('#report-form').attr("action", "/index.php?r=report/create");
+		jQuery('#report-form').attr("action", "/index.php/report/create");
 		jQuery('#report-form').attr("target","_self");
 	});
 	
 	jQuery("#publishReport, #publishReport1").on("click", function(event){
 		jQuery('#Report_status').attr("value","2");
-		jQuery('#report-form').attr("action", "/index.php?r=report/create");
+		jQuery('#report-form').attr("action", "/index.php/report/create");
 		jQuery('#report-form').attr("target","_self");
 	});
 	
@@ -492,7 +492,7 @@ jQuery(document).ready(function() {
 	jQuery(document).on("click", "#saveReportUpdate, #saveReportUpdate1", function(event){
 		jQuery('#Report_status').attr("value","1");
 		var reportId=jQuery('#Report_id').val();
-		jQuery('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
+		jQuery('#report-form').attr("action", "/index.php/report/update/"+reportId);
 		jQuery('#report-form').attr("target","_self");
 		jQuery('#report-form').submit();
 	});	
@@ -500,7 +500,7 @@ jQuery(document).ready(function() {
 	jQuery(document).on("click", "#publishReportUpdate, #publishReportUpdate1", function(event){
 		jQuery('#Report_status').attr("value","2");
 		var reportId=jQuery('#Report_id').val();
-		jQuery('#report-form').attr("action", "/index.php?r=report/update&id="+reportId);
+		jQuery('#report-form').attr("action", "/index.php/report/update/"+reportId);
 		jQuery('#report-form').attr("target","_self");
 		jQuery('#report-form').submit();
 	});
@@ -509,14 +509,14 @@ jQuery(document).ready(function() {
 	jQuery(document).on('click','#previewReport, #previewReport1', function(){
 		if(navigator.appVersion.indexOf("MSIE 8.")!=-1){
 			var msj="";
-			jQuery("#report-form").attr("action","/index.php?r=report/preview");
+			jQuery("#report-form").attr("action","/index.php/report/preview");
 			jQuery("#report-form").attr("target","_blank");
 			jQuery("#report-form").submit();
 		}
 		else{
 			var reportClone = jQuery("#report-form").clone(true);
 			jQuery(reportClone).attr("id","newReportForm");
-			jQuery(reportClone).attr("action","/index.php?r=report/preview");
+			jQuery(reportClone).attr("action","/index.php/report/preview");
 			jQuery(reportClone).attr("target","_blank");
 			jQuery(reportClone).css("display","none");
 
@@ -574,7 +574,7 @@ jQuery(document).ready(function() {
 			source: function(request, response) {
 				jQuery.ajax({
 					type: 'GET',
-					url: '/index.php?r=report/autocompleteCell',
+					url: '/index.php/report/autocompleteCell',
 					data: {
 						columnID: col, 
 						term: request.term

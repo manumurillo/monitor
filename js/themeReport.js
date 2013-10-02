@@ -185,7 +185,7 @@ jQuery(document).ready(function() {
 		jQuery.ajax(
 		{
 		'type': 'POST',
-		'url': 	'/index.php?r=report/export',
+		'url': 	'/index.php/report/export',
 		'data':	{
 					'content':content,
 					'id':id,
