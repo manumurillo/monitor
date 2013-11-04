@@ -151,9 +151,10 @@ class ReportTableCell extends CActiveRecord
 		// }
 	// }
 	
-	protected function afterSave()
+	/*protected function afterSave()
 	{
 			parent::afterSave();
 			FrequencyContent::model()->updateFrequency(strip_tags($this->content), $this->column_id);
 	}
+	*/
 }

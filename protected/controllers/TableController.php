@@ -325,9 +325,10 @@ class TableController extends Controller
 						if($column->autocomplete == TableColumn::AUTOCOMPLETE){
 							$layout.="	jQuery('#ReportTableCell_".$cellCounter."_content').attr('class','autoComplete content');";
 						}
-					$layout.="console.log('Se agregó el editor a: #ReportTableCell_".$cellCounter."_content');</script>";
+					$layout.="</script>";
 				}
 				$textCounter++;
+				$rowCounter++;
 				$layout.="<th width='200px' id='cellControls' align='left' valign='center'>
 						<div id='nvoColorPicker".$rowCounter."'></div>
 						<input type='text' id='ReportTableRow_".$rowCounter."_color' name='ReportTableRow[".$rowCounter."][color]' size='8' maxlength='7'><br>
@@ -382,11 +383,11 @@ class TableController extends Controller
 					</table>";
 				$insertedTexts++;
 			}
-			$array = [
+			$array = array(
 				"layout" => $layout,
 				"cellCounter" => $insertedCells,
 				"textCounter" => $insertedTexts,
-			];
+			);
 			echo json_encode($array);
 		}
 		Yii::app()->end();

@@ -47,8 +47,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=monitoreo_axa',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'monitor',
+			'password' => 'axapwd2013',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
@@ -76,6 +76,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'jmanumurillo@hotmail.com',
 	),
 );

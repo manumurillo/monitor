@@ -133,6 +133,8 @@ function toLinkAgain($n)
 										}
 										else
 										{
+											echo $rTables[$tableCounter]['table_id'];
+											
 											$_table = Table::model()->findByPk($rTables[$tableCounter]['table_id']);
 											$_columns = $_table->columns;
 											$tblWidth = 0;

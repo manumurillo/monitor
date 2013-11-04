@@ -1,8 +1,8 @@
 Options +FollowSymLinks
 
 IndexIgnore */*
-RewriteBase /
-#RewriteBase /vans
+RewriteBase /axa/monitor
+
 
 <IfModule mod_rewrite.c>
 RewriteEngine on
@@ -12,5 +12,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
-RewriteRule . index.php
+#RewriteRule . index.php
+RewriteRule ^(.*)\?*$ index.php/$1 [L,QSA]
 </IfModule>

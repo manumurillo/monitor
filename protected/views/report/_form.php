@@ -31,6 +31,8 @@
 					<p class="error"><?php echo $form->errorSummary($report); ?></p>
 				</th>
 				<th align="right" valign="middle">
+				    <input type="button" id="previewReport" class="preview"/>
+				    
 					<?php 
 					if($report->isNewRecord)
 					{
@@ -44,7 +46,6 @@
 					}
 					//echo ' '.CHtml::submitButton('', array('id'=>'previewReport', 'class'=>'preview')); 
 				?>
-					<input type="button" id="previewReport" class="preview"/>
 				</th>
 			</tr>
 			<tr>
@@ -56,7 +57,9 @@
 						echo $form->hiddenField($report,'status'); 
 						echo $form->hiddenField($report,'id'); 
 					?><br>
-					<span id="countItems"></span> / <span id="countRows"></span> / <span id="countCells"></span> / <span id="countTexts"></span>
+					<div id="totales" style="display: none">
+					   <span id="countItems"></span> / <span id="countRows"></span> / <span id="countCells"></span> / <span id="countTexts"></span>
+					</div>
 				</th>
 			</tr>
 		</thead>
@@ -229,21 +232,23 @@
 		</tbody>
 		<tfoot>
 			<tr>
-				<th colspan="2" align="center" valign="middle">
+				<th colspan="2" align="center" valign="middle"><br />
+				    <input type="button" id="previewReport1" class="preview"/>
+				    <input type="hidden" id="actionAfter" name="actionAfter" value="0" />
 					<?php 
 					if($report->isNewRecord)
-					{
+					{ 
 						echo CHtml::submitButton('', array('id'=> 'saveReport1', 'class'=>'saveDraft'));
 						echo ' '.CHtml::submitButton('', array('id'=> 'publishReport1' , 'class'=>'publishAndSave'));
 					}
 					else
-					{ 
+					{
 						echo CHtml::submitButton('', array('id'=> 'saveReportUpdate1', 'class'=>'saveDraft'));
 						echo ' '.CHtml::submitButton('', array('id'=> 'publishReportUpdate1', 'class'=>'publishAndSave'));
 					}
 					//echo ' '.CHtml::submitButton('', array('id'=>'previewReport1', 'class'=>'preview')); 
 				?>
-					<input type="button" id="previewReport1" class="preview"/>
+					
 				</th>
 			</tr>
 		</tfoot>
@@ -307,6 +312,7 @@
 					echo  "<span id='errorTable'></span>";
 					echo $form->dropdownlist($rTable, "[$tableCounter]table_id", CHtml::listData(Table::model()->findAll(), 'id', 'name'),
 					  array('empty'=>'Seleccione una tabla', 'selected'=>'')); 
+				    echo  "<span id='TableName' style='font-weight: bold'></span>";
 					echo $form->hiddenField($rTable,"[$tableCounter]rowCounter",array('value'=>0, 'class'=>'rowCount')); 
 				?>
 				<br>

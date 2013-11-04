@@ -40,6 +40,13 @@
 	color: #ffffff;
 }
 
+.saveAndContinue{
+    width: 108px;
+    height: 25px;
+    background: #ffffff url(../images/saveAndContinue.png) no-repeat;
+    color: #ffffff;
+}
+
 .showHide{
 	width: 20px;
 	height: 20px;

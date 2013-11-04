@@ -178,9 +178,12 @@ jQuery(document).ready(function() {
 		function()
 		{
 			jQuery('#ReportTable_'+itemCounter+'_table_id option[value='+jQuery(this).val()+']').attr("selected",true); 
-			//jQuery('#ReportTable_'+itemCounter+'_table_id').attr("disabled","disabled"); 
+			var parentSel = jQuery('#ReportTable_'+itemCounter+'_table_id').parents().get(0);
+			jQuery(parentSel).children("#TableName").html(jQuery('#ReportTable_'+itemCounter+'_table_id option:selected').html());
+			jQuery('#ReportTable_'+itemCounter+'_table_id').css("display","none"); 
+			
 			jQuery("#layoutTable"+itemCounter).children("#load").css("display","inline"); 
-			console.log("Valores antes de enviar la consulta: \nCellCounter: "+cellCounter+" Textcounter: "+textCounter+" rowCounter: "+rowCounter)
+			console.log("Valores antes de enviar la consulta: \nCellCounter: "+cellCounter+" Textcounter: "+textCounter+" rowCounter: "+rowCounter);
 			jQuery.ajax(
 					{
 					'type': 'POST',
@@ -476,12 +479,14 @@ jQuery(document).ready(function() {
 	
 	//Si es nuevo reporte.
 	jQuery("#saveReport, #saveReport1").on("click", function(event){
+	    jQuery('#actionAfter').attr("value","finish");
 		jQuery('#Report_status').attr("value","1");
 		jQuery('#report-form').attr("action", "/index.php/report/create");
 		jQuery('#report-form').attr("target","_self");
 	});
 	
 	jQuery("#publishReport, #publishReport1").on("click", function(event){
+	    jQuery('#actionAfter').attr("value","finish");
 		jQuery('#Report_status').attr("value","2");
 		jQuery('#report-form').attr("action", "/index.php/report/create");
 		jQuery('#report-form').attr("target","_self");
@@ -490,6 +495,7 @@ jQuery(document).ready(function() {
 	
 	//Si el reporte será actualizado.
 	jQuery(document).on("click", "#saveReportUpdate, #saveReportUpdate1", function(event){
+	    jQuery('#actionAfter').attr("value","finish");
 		jQuery('#Report_status').attr("value","1");
 		var reportId=jQuery('#Report_id').val();
 		jQuery('#report-form').attr("action", "/index.php/report/update/"+reportId);
@@ -498,6 +504,7 @@ jQuery(document).ready(function() {
 	});	
 	
 	jQuery(document).on("click", "#publishReportUpdate, #publishReportUpdate1", function(event){
+	    jQuery('#actionAfter').attr("value","finish");
 		jQuery('#Report_status').attr("value","2");
 		var reportId=jQuery('#Report_id').val();
 		jQuery('#report-form').attr("action", "/index.php/report/update/"+reportId);
@@ -505,6 +512,15 @@ jQuery(document).ready(function() {
 		jQuery('#report-form').submit();
 	});
 	
+	//Guardar y continuar
+    jQuery(document).on("click", "#saveAndContinue", function(event){
+        jQuery('#actionAfter').attr("value","finish");
+        var reportId=jQuery('#Report_id').val();
+        jQuery('#report-form').attr("action", "/index.php/report/update/"+reportId);
+        jQuery('#report-form').attr("target","_self");
+        jQuery('#report-form').submit();
+    }); 
+    
 	//Vista previa
 	jQuery(document).on('click','#previewReport, #previewReport1', function(){
 		if(navigator.appVersion.indexOf("MSIE 8.")!=-1){
@@ -571,6 +587,7 @@ jQuery(document).ready(function() {
 		var par = jQuery(this).parent();
 		var col=jQuery(par).children('.column').val();
 		jQuery(this).autocomplete({
+		    minLength: 1,
 			source: function(request, response) {
 				jQuery.ajax({
 					type: 'GET',
@@ -584,8 +601,7 @@ jQuery(document).ready(function() {
 						response(data);
 					}
 				})
-			},
-			minLength: 1
+			}
 		});	
 	}
 	
